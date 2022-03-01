@@ -19,9 +19,15 @@ struct Fruit {
     virtual void shape() {
         
     };
+    
+    ~Fruit(){
+        printf("Fruit release \n");
+
+    }
 };
 
-struct Apple {
+
+struct Apple : public Fruit{
 public:
 //    virtual void color() override{
 //
@@ -29,6 +35,9 @@ public:
 //    string a;
     int weight;
 //    string b;
+    ~Apple(){
+        printf("apple release \n");
+    }
     
     explicit Apple(Apple const &a) {
         printf("copy constructor const -- %s\n",__func__);
@@ -317,17 +326,85 @@ public:
 //    }
 //};
 
+int drink2(int n) {
+    int water = 0;
+    int cover = 0;
+    int bottle = 0;
+    
+    while (n >= 2 || cover >= 4 || bottle >= 2) {
+        if (n >= 2) {
+            n -= 2;
+            cover ++;
+            bottle ++;
+            water ++;
+        }
+        if (cover >= 4) {
+            cover -= 4;
+            cover ++;
+            bottle ++;
+            water ++;
+        }
+        if (bottle >= 2) {
+            bottle -= 2;
+            cover ++;
+            bottle ++;
+            water ++;
+        }
+    }
+    
+    return water;
+    
+}
+int drink(int money) {
+    int bottles = money / 2;
+    int res = 0;
+    for(int i = 1; i <= bottles; i++) {
+        res++;
+        if(i % 2 == 0) {
+            bottles++;
+        }
+        if(i % 4 == 0) {
+            bottles++;
+        }
+    }
+    return res;
+}
+
+
 
 int main(int argc, const char * argv[]) {
     
+//    std::shared_ptr<int> ptr = std::make_shared<int>(1200);
+//    {
+//        std::shared_ptr<int> ptr2 = ptr;
+//        printf("%d \n",ptr.use_count());
+//
+//    }
     
     Apple a;
+    
+//    char str[] = "";
+//
+//    printf("%s %d \n",__func__,sizeof(str));
+//    printf("%p \n","123");
+//    printf("%p \n","123");
+//    printf("%p \n","123");
+
+//    printf("%d \n",ptr.use_count());
+//    Apple a;
 //    vector<Apple> v;
 //    v.push_back(a);
 
-    a.qingbing1(std::move(a));
+//    a.qingbing1(std::move(a));
     
-    printf("\n");
+//    auto a = 1.234;
+//
+//    printf("%s \n",typeid(a).name());
+//
+//    1 + 0.5 + 0.25
+//    1.75
+//
+    
 //    printf("%s \n",argv[0]);
 //    Base *foo = new Base(1200);
 //
@@ -423,7 +500,15 @@ int main(int argc, const char * argv[]) {
 //    printf("%p \n",&Base::print);
 //    printf("%p \n",&Base::vPrint);
     
-    
+
 }
 
 
+
+char *strcpy(char *dest, const char *src)
+{
+    assert(dest!= NULL && src!=NULL);
+    char *address = dest;
+    while ((*address ++ = *src ++) != 0);
+    return address;
+}
