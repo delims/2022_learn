@@ -98,7 +98,7 @@ typedef struct classref * classref_t;
 **********************************************************************/
 template <typename Element, typename List, uint32_t FlagMask>
 struct entsize_list_tt {
-    uint32_t entsizeAndFlags;
+    uint32_t entsizeAndFlags; //method_list_t  flag = 0x3
     uint32_t count;
     Element first;
 
@@ -161,10 +161,7 @@ struct entsize_list_tt {
 
         iterator() { }
 
-        iterator(const List& list, uint32_t start = 0)
-            : entsize(list.entsize())
-            , index(start)
-            , element(&list.getOrEnd(start))
+        iterator(const List& list, uint32_t start = 0) : entsize(list.entsize()), index(start) , element(&list.getOrEnd(start))
         { }
 
         const iterator& operator += (ptrdiff_t delta) {
