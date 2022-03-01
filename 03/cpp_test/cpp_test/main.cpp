@@ -15,13 +15,24 @@ struct Fruit2 {
     
 };
 
-template <typename A>
+//template <typename A>
 struct Apple {
-    A a;
-    static void func() {
-        
-        printf("static func size = %d \n",sizeof(Apple));
+    
+private:
+//    int a;
+//    int b;
+public:
+    void func() {
+        printf("%s \n",__func__);
     }
+    
+    void func() const{
+        printf("%s const \n",__func__);
+    }
+    
+//    static void func() {
+//        printf("static func size = %d \n",sizeof(Apple));
+//    }
     void func2 () {
         printf("func size = %d \n",sizeof(Apple));
     }
@@ -46,17 +57,17 @@ struct Apple {
         printf("====%s \n",__func__);
         return *this;
     }
-    operator Fruit& () {
-        printf("okkkkkk \n");
-        Fruit f;
-        return f;
-    }
-    
-    operator Fruit2& () {
-        printf("okkj \n");
-        Fruit2 f;
-        return f;
-    }
+//    operator Fruit& () {
+//        printf("okkkkkk \n");
+//        Fruit f;
+//        return f;
+//    }
+//
+//    operator Fruit2& () {
+//        printf("okkj \n");
+//        Fruit2 f;
+//        return f;
+//    }
 private:
     
 //    int a;
@@ -88,7 +99,26 @@ void somefunc(args&... a) {
     std::cout << sizeof...(a) << std::endl;
 }
 
+struct array_t {
+    long count;
+    int *p[0];
+    
+    void func() {
+        printf("%d \n",sizeof(p[0]));
+    }
+};
+
 int main(int argc, const char * argv[]) {
+    
+    array_t arr;
+//    printf(" == %d   \n ",sizeof(arr));
+    arr.func();
+//    Apple apple;
+//    apple.func();
+    
+//    (const_cast<const Apple &>(apple)).func();
+    
+//    app.func();
     
 //    somefunc<int>(1,2,3,4,5);
 //    somefunc(1,2,3,4);
@@ -99,9 +129,9 @@ int main(int argc, const char * argv[]) {
 //    ++a; // 打印 operator++
 //    int fd;
     
-    Apple<long> b;
-    Apple<int>::func();
-    b.func2();
+//    Apple<long> b;
+//    Apple<int>::func();
+//    b.func2();
 //    (Fruit2)b;
     
 //    printf("%d \n",sizeof(b));

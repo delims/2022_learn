@@ -605,8 +605,7 @@ class list_array_tt {
         typename List::iterator m, mEnd;
 
      public:
-        iterator(List **begin, List **end) 
-            : lists(begin), listsEnd(end)
+        iterator(List **begin, List **end) : lists(begin), listsEnd(end)
         {
             if (begin != end) {
                 m = (*begin)->begin();

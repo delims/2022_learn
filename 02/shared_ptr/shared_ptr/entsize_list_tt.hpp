@@ -54,6 +54,107 @@ struct entsize_list_tt {
         return iterator(*static_cast<const List*>(this),0);
     }
     
+    iterator begin() {
+        return iterator(*static_cast<const List*>(this),0);
+    }
+    
+    const iterator end() const {
+        return iterator(*static_cast<const List*>(this),count);
+    }
+    
+    iterator end() {
+        return iterator(*this,count);
+    }
+
+    
+    struct iterator {
+        uint32_t entsize;
+        uint32_t index;
+        Element *element;
+        
+        typedef Element value_type;
+        typedef Element* pointer;
+        typedef Element& reference;
+        typedef uintptr_t difference_type;
+        
+        
+        iterator(){}
+        
+        iterator(const List& list, uint32_t start = 0) : entsize(list.entsize()),index(start),element(&list.getOrEnd(start)){}
+        
+        const iterator& operator += (uintptr_t delta) {
+            element = (Element*)((char*)element + delta * entsize);
+            index += delta;
+            return *this;
+        }
+        
+        const iterator& operator -= (uintptr_t delta) {
+            element = (Element*)((char*)element - delta * entsize);
+            index -= delta;
+            return *this;
+        }
+        
+        const iterator& operator - (uintptr_t delta) {
+            return (*this) -= delta;
+        }
+        
+        const iterator& operator + (uintptr_t delta) {
+            return (*this) += delta;
+        }
+        
+        const iterator& operator --(int) {
+            *this -= 1; return *this;
+        }
+        
+        const iterator& operator ++(int) {
+            *this += 1; return *this;
+        }
+        
+        const iterator& operator --() {
+            iterator result(*this);
+            *this -= 1;
+            return result;
+        }
+        const iterator& operator ++() {
+            iterator result(*this);
+            *this += 1;
+            return result;
+        }
+        
+        uintptr_t operator - (const iterator &rhs) {
+            return this->index - rhs.index;
+        }
+        
+        Element* operator *() {
+            return element;
+        }
+        Element& operator ->() {
+            return *element;
+        }
+        
+        operator Element& () const {
+            return *element;
+        }
+        
+        bool operator == (const iterator& rhs) {
+            return this->element == rhs.element;
+        }
+        
+        bool operator != (const iterator& rhs) {
+            return this->element == rhs.element;
+        }
+        
+        bool operator < (const iterator& rhs) {
+            return this->element < rhs.element;
+        }
+        
+        bool operator > (const iterator& rhs) {
+            return element > rhs.element;
+        }
+
+    };
+    
+    
 };
 
 #endif /* entsize_list_tt_hpp */
