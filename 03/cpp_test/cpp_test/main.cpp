@@ -7,6 +7,9 @@
 
 #include <iostream>
 #include <sys/fcntl.h>
+#include <vector>
+#include <thread>
+using namespace std;
 struct Fruit {
     
 };
@@ -119,9 +122,39 @@ template <typename... T>
 
 int main(int argc, const char * argv[]) {
     
-    f(1.1,2.3);
+//    f(1.1,2.3);
+    const int &i = 100;
     
+    decltype(i) b =100; // decltype(i) 代表 i的类型
     
+    auto func = [](int i) -> int {
+        return 200 * i;
+    };
+    auto func2 = []{
+        return 100;
+    };
+//    cout << func2() << endl;
+    
+    int x = 100;
+    auto fix = [=]() mutable {
+        x ++;
+    };
+    
+    fix();
+    fix();
+    
+    cout << std::thread::hardware_concurrency() << endl;
+//    std::this_thread::sleep_for(std::chrono::seconds(2));
+    cout << std::thread::hardware_concurrency() << endl;
+    
+    std::mutex mutex;
+    mutex.lock();
+    
+    mutex.unlock();
+    
+    cout << __cpluplus << endl;
+
+    std::vector<std::vector<int>> y;
 //    array_t arr;
 //    printf(" == %d   \n ",sizeof(arr));
 //    arr.func();
