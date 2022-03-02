@@ -40,7 +40,7 @@ private:
     // SEL-first is better for armv7* and i386 and x86_64.
 #if __arm64__
     MethodCacheIMP _imp;
-    cache_key_t _key;
+    cache_key_t _key; //unsigned long
 #else
     cache_key_t _key; //unsigned long
     MethodCacheIMP _imp;
@@ -58,8 +58,8 @@ public:
 
 struct cache_t {
     struct bucket_t *_buckets;
-    mask_t _mask;
-    mask_t _occupied;
+    mask_t _mask; //unsigned int
+    mask_t _occupied; //unsigned int
 
 public:
     struct bucket_t *buckets();

@@ -9,6 +9,7 @@
 #define entsize_list_tt_hpp
 
 typedef unsigned int uint32_t;
+#include <iostream>
 
 #include <stdio.h>
 
@@ -42,12 +43,17 @@ struct entsize_list_tt {
     static size_t byteSize(uint32_t entsize, uint32_t count) {
         return sizeof(entsize_list_tt) + (count-1)*entsize;
     }
-//    List *duplicate() const {
+    List *duplicate() const {
 //        auto *dup = (List*)calloc(this->byteSize(),1);
 //        dup->entsizeAndFlags = this->entsizeAndFlags;
 //        dup->count = this->count;
-//        std::copy()
-//    }
+        
+        auto *dup = (List*)calloc(this->byteSize(),1);
+        dup->entsizeAndFlags = this->entsizeAndFlags;
+        dup->count = this->count;
+        std::copy(begin(),end(),dup->begin());
+        return dup;
+    }
     
     struct iterator;
     const iterator begin() const {

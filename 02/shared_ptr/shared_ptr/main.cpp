@@ -8,6 +8,7 @@
 #include <iostream>
 
 #include "shared_ptr.hpp"
+using namespace std;
 
 class Apple {
 public:
@@ -24,21 +25,39 @@ public:
 };
 
 
+template<typename T, typename... Args>
+void foo1(const T& t, const Args&... rest) {
+    std::cout << sizeof(T) << endl;
+    cout << sizeof...(Args) << endl;//打印可变参数数量
+    cout << sizeof...(rest) << endl;//打印可变参数数量
+}
 
+
+template <typename... Args>
+class Academic {
+public:
+    void func(Args ... args) {
+        printf("count = %ld \n",sizeof...(Args));
+        printf("count = %ld \n",sizeof...(args));
+    }
+};
 int main(int argc, const char * argv[]) {
-    // insert code here...
+    Academic<int,int,int> aca;
+    aca.func(1, 2, 3);
+    return 0;
+}
     
     
-    printf("%d \n",__cplusplus);
+//    printf("%d \n",__cplusplus);
     
-    std::cout << sizeof(shared_ptr<int>) << "\n";
-    
-    shared_ptr<Apple> a = new Apple();
-    
-    a->weigeht = 100;
-    a->print();
-    
-    printf("%d \n",a->weigeht);
+//    std::cout << sizeof(shared_ptr<int>) << "\n";
+//
+//    shared_ptr<Apple> a = new Apple();
+//
+//    a->weigeht = 100;
+//    a->print();
+//
+//    printf("%d \n",a->weigeht);
     
 //    char *p = "12345";
 //    ((int*)p) ++;
@@ -67,8 +86,7 @@ int main(int argc, const char * argv[]) {
 //    printf("\n");
 //    printf("\n");
 //    printf("\n");
-    return 0;
-}
+
 
 __attribute__((destructor))
 void func1() {

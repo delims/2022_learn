@@ -108,11 +108,23 @@ struct array_t {
     }
 };
 
+template <typename... T>
+   void f(T... args)
+   {
+       for (auto x : {args...})
+       {
+           std::cout << x << std::endl;
+       }
+   }
+
 int main(int argc, const char * argv[]) {
     
-    array_t arr;
+    f(1.1,2.3);
+    
+    
+//    array_t arr;
 //    printf(" == %d   \n ",sizeof(arr));
-    arr.func();
+//    arr.func();
 //    Apple apple;
 //    apple.func();
     
