@@ -8,25 +8,113 @@
 #include <iostream>
 #include <thread>
 #include <mutex>
+//#include <async>
+#include <thread>
+#include <future>
 
 using namespace std;
 
+int func(int in) { return in + 1; }
+
+void bubble_sort(int *array, int size) {
+    int temp;
+    for (int i = 0; i < size - 1; i ++ ) {
+        for (int j = i + 1 ; j < size; j ++) {
+            if (array[i] < array[j]) {
+                temp = array[i];
+                array[i] = array[j];
+                array[j] = temp;
+            }
+        }
+    }
+}
+
+//class Apple {
+//public:
+//    Apple() = default;
+//    Apple(Apple& app) {
+//        printf("copy -\n");
+//    }
+//    Apple& operator=(Apple &app) {
+//        printf("= copy \n");
+//        return <#expression#>;
+//    }
+//};
+
+class A
+{
+public:
+    int value = 1;
+    A(){
+        printf("constructor\n");
+    };//构造函数
+    A(const A& a) { //拷贝构造函数
+        printf("copy \n");
+    };
+    ~A() = default;//析构函数
+    A& operator=(const A& a)  //赋值运算符重载
+    {
+        printf("operator copy \n");
+        return *this;
+    }
+    A* operator &()//取地址运算符重载
+    {
+        return this;
+    }
+    const A* operator &() const//const修饰的取地址运算符重载
+    {
+        return this;
+    }
+};
+
 int main(int argc, const char * argv[]) {
-    // insert code here...
-//    std::cout << "Hello, World!\n";
     
-    auto func = []() {
-        for (int i = 0; i <= 10; ++i) {
-            cout << i << "  ";
+//    A a;
+//    A b = a;
+//    A c;
+//    c = a;
+    A a,b,c;
+    
+    auto func = [=,&a,&b,&c](int i) {
+        if (i == 1) {
+            printf("%d \n",a.value);
+        } if (i == 2) {
+            printf("%d \n",b.value);
+        }if (i == 3) {
+            printf("%d \n",c.value);
         }
     };
     
-    thread t(func);
-    if (t.joinable()) {
-        t.join();
-    }
+    func(1);
     
-    cout << "123" << "  ";
+    // insert code here...
+//    std::cout << "Hello, World!\n";
+    
+//    int arr[] = {22,31,1,45,3,4,6,221,56};
+//
+//    bubble_sort(arr, sizeof(arr)/sizeof(int));
+//
+//    for (int i = 0; i < sizeof(arr)/sizeof(int); i ++) {
+//        printf("%d \n",arr[i]);
+//    }
+//
+//
+//    auto func = []() {
+//        for (int i = 0; i <= 10; ++i) {
+//            cout << i << "  ";
+//        }
+//    };
+//
+//    thread t(func);
+//    if (t.joinable()) {
+//        t.join();
+//    }
+    
+//    auto res = std::async(func, 5);
+//    vector<int> a(100,0);
+    
+    
+    cout << "\n";
 
     return 0;
 }

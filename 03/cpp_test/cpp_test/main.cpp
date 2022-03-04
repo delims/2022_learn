@@ -112,49 +112,77 @@ struct array_t {
 };
 
 template <typename... T>
-   void f(T... args)
-   {
-       for (auto x : {args...})
-       {
-           std::cout << x << std::endl;
-       }
-   }
+void f(T... args)
+{
+    for (auto x : {args...})
+    {
+        std::cout << x << std::endl;
+    }
+}
+
+class Pear {
+public:
+    int a;
+    Pear() {
+        printf("constructor \n");
+    }
+    ~Pear() {
+        printf("destructor \n");
+    }
+};
+
 
 int main(int argc, const char * argv[]) {
     
+//    Pear p;
+    
+//    Pear *pear = new Pear[3]();
+//
+//    delete pear;
+    
+    char *p = (char*)malloc(10);
+    
+    printf("%p \n",p);
+    printf("%p \n",p+1);
+
+    free(p);
+    
+//    int *p1 = new int[10]();
+//    int *p2 = new int[10];
+    
 //    f(1.1,2.3);
-    const int &i = 100;
-    
-    decltype(i) b =100; // decltype(i) 代表 i的类型
-    
-    auto func = [](int i) -> int {
-        return 200 * i;
-    };
-    auto func2 = []{
-        return 100;
-    };
+//    const int &i = 100;
+//
+//    decltype(i) b =100; // decltype(i) 代表 i的类型
+//
+//    auto func = [](int i) -> int {
+//        return 200 * i;
+//    };
+//    auto func2 = []{
+//        return 100;
+//    };
 //    cout << func2() << endl;
     
-    int x = 100;
-    auto fix = [=]() mutable {
-        x ++;
-    };
-    
-    fix();
-    fix();
-    
-    cout << std::thread::hardware_concurrency() << endl;
-//    std::this_thread::sleep_for(std::chrono::seconds(2));
-    cout << std::thread::hardware_concurrency() << endl;
-    
-    std::mutex mutex;
-    mutex.lock();
-    
-    mutex.unlock();
-    
-    cout << __cpluplus << endl;
-
-    std::vector<std::vector<int>> y;
+//    int x = 100;
+//    auto fix = [=]() mutable {
+//        x ++;
+//    };
+//
+//    fix();
+//    fix();
+//
+//    cout << std::thread::hardware_concurrency() << endl;
+////    std::this_thread::sleep_for(std::chrono::seconds(2));
+//    cout << std::thread::hardware_concurrency() << endl;
+//
+//    std::mutex mutex;
+//    mutex.lock();
+//
+//    mutex.unlock();
+//
+//    cout << __cpluplus << endl;
+//
+//    std::vector<std::vector<int>> y;
 //    array_t arr;
 //    printf(" == %d   \n ",sizeof(arr));
 //    arr.func();
