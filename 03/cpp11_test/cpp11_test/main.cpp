@@ -11,6 +11,8 @@
 //#include <async>
 #include <thread>
 #include <future>
+#include <vector>
+#include <list>
 
 using namespace std;
 
@@ -68,7 +70,33 @@ public:
 };
 
 int main(int argc, const char * argv[]) {
+//    list<int> l;
     
+//    std::vector<int> vl;
+//    vl.shrink_to_fit();
+    
+    
+    int *p = (int*)malloc(4);
+    *p = 12467890;
+    printf("%p,%d\n",p,*p);
+    p = (int*)realloc(p, 400);
+    printf("%p,%d\n",p,*p);
+
+    
+
+//    while (1) {
+//        malloc(1000);
+//        calloc(<#size_t __count#>, <#size_t __size#>)
+//        realloc(void *__ptr, <#size_t __size#>)
+//    }
+    
+//    try {
+//        void *uy = malloc(1000000000000000000L);
+//    } catch (...) {
+//        printf("exception\n");
+//    }
+//    printf("%d \n",u89);
+
 //    A a;
 //    A b = a;
 //    A c;
@@ -118,3 +146,10 @@ int main(int argc, const char * argv[]) {
 
     return 0;
 }
+
+//void *memcpy(void *dest,void *src,size_t n) {
+//    char *dp = (char*)dest;
+//    char *sp = (char*)src;
+//    while (n --) *dp ++ = *sp ++;
+//    return dest;
+//}

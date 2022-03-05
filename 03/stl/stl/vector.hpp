@@ -43,16 +43,17 @@ public:
     iterator end() {return finish;}
     size_type size() { return size_type(finish - start);}
     size_type capacity() const {return size_type(end_of_storage - start);}
-    
-    
-    
+        
     void fill_initialize(size_type n, const T& value) {
-//        start =
+        
     }
     
     vector():start(0),finish(0),end_of_storage(0){}
     vector(size_type n, const T& value) {
         
+        for (int i = 0; i < n; i ++) {
+            this->push_back(value);
+        }
     }
     
     void push_back(const T& value) {
@@ -61,28 +62,21 @@ public:
     }
     
     void pop_back() {
-        desctruct(finish--);
+        destroy(finish--);
     }
-    void desctruct(iterator p) {
-        delete p;
-    }
+
     iterator allocate_and_fill (size_type n, const T& value) {
     }
     
-//    void insert_aux(iterator position, const T& x)
-//    {
-//        if (finish != end_of_storage) {
-//            construct(finish++, x);
-//        } else {
-//            const size_type old_size = size();
-//            const size_type new_size = old_size ? 2 * old_size : 1;
-//            iterator new_start = allocate(new_size);
-//            iterator new_finish = new_start;
-//            uninitialized_copy(start, finish, new_start);
-//            new_finish = new_start + old_size;
-//        }
-//    }
-    
+    reference operator[](int i) {
+        return *(start + i);
+    }
+    reference at(int i) {
+        return *(start + i);
+    }
+    void resize(size_type size) {
+        
+    }
     void expand() {
         const size_type old_capacity = capacity();
         const size_type new_capacity = old_capacity ? 2 * old_capacity : 1;
@@ -91,18 +85,24 @@ public:
         uninitialized_copy(start, finish, new_start);
         new_finish = new_start + size();
         end_of_storage = new_start + new_capacity;
+        start = new_start;
+        finish = new_finish;
     }
     
-    void construct(iterator p,const T& value) {
+    inline void construct(iterator p,const T& value) {
         new (p) T(value);
+    }
+    inline void destroy(iterator ptr) {
+        ptr->~T();
     }
     
     iterator allocate(size_type n) {
-        return ::operator new(n * sizeof(T));
+        return (iterator)(::operator new(n * sizeof(T)));
     }
     
     iterator uninitialized_copy(iterator src_start, iterator src_end, iterator new_start) {
         memcpy(new_start, src_start, (src_end - src_start)*sizeof(value_type));
+        return new_start;
     }
     
 private:

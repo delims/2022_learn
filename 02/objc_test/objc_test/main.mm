@@ -198,6 +198,13 @@ int main(int argc, const char * argv[]) {
     [app test];
 
     
+//    for (int i = 0; i < 1000; i ++) {
+//        dispatch_async(dispatch_get_global_queue(0, 0), ^{
+//            sleep(100);
+//        });
+//    }
+//
+//    sleep(1000);
 //    printf("%x \n" ,b->isa.extra_rc);
 //    printf("%x \n" ,b->isa.nonpointer);
 //    printf("%lx \n",b->isa.shiftcls << 3);

@@ -49,42 +49,53 @@ public:
     }
 };
 
-//class A {
-//public:
-//    long a;
-//
-//    A() {
-//        printf("%p\n",this);
-//    };
-//    A(const A& a) {
-//        printf("copy \n");
-//        printf("%p \n",this);
-//    };
-//    void f() const {
-//        delete this;
-//    }
-//    ~A(){
-//        printf("delete \n");
-//    }
-//};
+class A {
+public:
+    long a;
+
+    A() {
+        printf("constructor %p\n",this);
+    };
+    A(const A& a) {
+        printf("copy \n");
+        printf("%p \n",this);
+    };
+    void f() const {
+        delete this;
+    }
+    ~A(){
+        printf("delete \n");
+    }
+};
 
 
 
 int main(int argc, const char * argv[]) {
     
     
+    
+    delims::vector<int> mytest;
+    mytest.push_back(1);
+    mytest.push_back(2);
+    mytest.push_back(3);
+//    mytest.push_back("123");
+//    mytest.push_back("123");
+//    mytest.push_back("123");
+//    mytest.push_back("123");
+//    mytest.push_back("123");
 
-//    delims::vector<int> mytest;
-//    mytest.push_back(1);
-//    printf("%d\n",mytest.size());
-//    mytest.push_back(2);
-//    printf("%d\n",mytest.size());
-//    mytest.push_back(2);
-//    printf("%d\n",mytest.size());
-//
+    printf("%lu\n",mytest.size());
+//    printf("%lu\n",mytest.capacity());
+
+//    mytest[3] = "hello";
     
-//    A *a = new A();
+    mytest.pop_back();
     
+    printf("%lu\n",mytest.size());
+
+
+//    cout << mytest[3] << endl;
+
 //    a->f();
 //    auto func = [=]() {
 //
