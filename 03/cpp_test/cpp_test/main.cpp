@@ -9,6 +9,7 @@
 #include <sys/fcntl.h>
 #include <vector>
 #include <thread>
+#include "_03_06.hpp"
 using namespace std;
 struct Fruit {
     
@@ -97,7 +98,7 @@ public:
 //    cout << sizeof...(rest) << endl;//打印可变参数数量
 //}
 
-template <typename T,typename... args>
+template <class... args>
 void somefunc(args&... a) {
     std::cout << sizeof...(a) << std::endl;
 }
@@ -108,6 +109,12 @@ struct array_t {
     
     void func() {
         printf("%d \n",sizeof(p[0]));
+        int a = 0;
+        int b = 0;
+        float c = 0;
+        somefunc(a,b,c);
+//        somefunc<int>(a,b,c);
+        
     }
 };
 
@@ -131,8 +138,14 @@ public:
     }
 };
 
+void footprint() {
+    long a[100];
+    memset(a, 0, sizeof(a));
+}
 
 int main(int argc, const char * argv[]) {
+    
+    _03_06();
     
 //    Pear p;
     
@@ -140,12 +153,22 @@ int main(int argc, const char * argv[]) {
 //
 //    delete pear;
     
-    char *p = (char*)malloc(10);
-    
-    printf("%p \n",p);
-    printf("%p \n",p+1);
-
-    free(p);
+//    char *p = (char*)malloc(10);
+//
+//    printf("%p \n",p);
+//    printf("%p \n",p+1);
+//
+//    free(p);
+//    const char *p;
+//    footprint();
+//    {
+//        string str = "1234124567689756789";
+//        p = str.c_str();
+//    }
+//
+//    footprint();
+//
+//    printf("%p\n%p\n%s\n",&p,p,p);
     
 //    int *p1 = new int[10]();
 //    int *p2 = new int[10];
@@ -195,6 +218,8 @@ int main(int argc, const char * argv[]) {
     
 //    somefunc<int>(1,2,3,4,5);
 //    somefunc(1,2,3,4);
+        
+//    somefunc<float>(1.2,1.2,2.9);
     
     
 //    Apple a;

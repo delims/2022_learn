@@ -69,18 +69,54 @@ public:
     }
 };
 
+class Apple {
+public:
+//    Apple(){};
+//    Apple(const Apple& apple) {
+//    }
+//    Apple& operator=(const Apple& apple) {
+//        return *this;
+//    }
+//    Apple* operator&() {
+//        return this;
+//    }
+//    const Apple* operator&() const {
+//        return this;
+//    }
+//    ~Apple(){}
+};
+
+A testCopy(A a) {
+    printf("%p \n",&a);
+    return a;
+}
+
 int main(int argc, const char * argv[]) {
+    
+//    A a;
+//    printf("%p \n",&a);
+//    printf("%p \n",&testCopy(a));
+
+    char a[] = "1225";
+    char b[] = "12";
+    
+    printf("%d\n",strcmp(a, b));
+    printf("%d\n",'2');
+
+    
 //    list<int> l;
     
 //    std::vector<int> vl;
 //    vl.shrink_to_fit();
     
+//    printf("%d %d\n",sizeof(unsigned),sizeof('\0'));
     
-    int *p = (int*)malloc(4);
-    *p = 12467890;
-    printf("%p,%d\n",p,*p);
-    p = (int*)realloc(p, 400);
-    printf("%p,%d\n",p,*p);
+    
+//    int *p = (int*)malloc(4);
+//    *p = 12467890;
+//    printf("%p,%d\n",p,*p);
+//    p = (int*)realloc(p, 400);
+//    printf("%p,%d\n",p,*p);
 
     
 
@@ -101,19 +137,25 @@ int main(int argc, const char * argv[]) {
 //    A b = a;
 //    A c;
 //    c = a;
-    A a,b,c;
+//    A a,b,c;
+//
+//    auto func = [=,&a,&b,&c](int i) {
+//        if (i == 1) {
+//            printf("%d \n",a.value);
+//        } if (i == 2) {
+//            printf("%d \n",b.value);
+//        }if (i == 3) {
+//            printf("%d \n",c.value);
+//        }
+//    };
+//
+//    func(1);
     
-    auto func = [=,&a,&b,&c](int i) {
-        if (i == 1) {
-            printf("%d \n",a.value);
-        } if (i == 2) {
-            printf("%d \n",b.value);
-        }if (i == 3) {
-            printf("%d \n",c.value);
-        }
-    };
     
-    func(1);
+//    int *i = new int[10]();
+//
+//    int a;
+    
     
     // insert code here...
 //    std::cout << "Hello, World!\n";
