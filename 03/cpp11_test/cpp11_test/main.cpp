@@ -31,6 +31,19 @@ void bubble_sort(int *array, int size) {
     }
 }
 
+void insert_sort(int *array, int size) {
+    for (int i = 1; i < size; i ++) {
+        int value = array[i];
+        int j;
+        for (j = i-1; j >= 0; j--) {
+            if (array[j] > value) {
+                array[j+1] = array[j];
+            }
+        }
+        array[j+1] = value;
+    }
+}
+
 //class Apple {
 //public:
 //    Apple() = default;
@@ -96,6 +109,16 @@ int main(int argc, const char * argv[]) {
 //    A a;
 //    printf("%p \n",&a);
 //    printf("%p \n",&testCopy(a));
+    
+    int array[] = {1,10,2,6,76,4,8};
+    size_t size = sizeof(array)/sizeof(int);
+    printf("size = %d \n",size);
+    insert_sort(array, size);
+    
+    for(int x : array) {
+        printf("%d \n",x);
+    }
+    
 
     char a[] = "1225";
     char b[] = "12";
