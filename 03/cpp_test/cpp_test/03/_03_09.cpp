@@ -9,7 +9,9 @@
 #include <list>
 #include <deque>
 #include <vector>
-
+#include <string>
+#include <iostream>
+#include <map>
 using namespace std;
 
 
@@ -46,7 +48,99 @@ void print_transform(vector<vector<int>> &mat) {
     }
 }
 
+class A {
+public:
+    A(){
+        printf("c A \n");
+    }
+    A(const A& a) {
+        printf("copy A \n");
+    }
+    ~A(){
+        printf("d A \n");
+    }
+};
+
+class B {
+public:
+    A a;
+    B(){
+        printf("c B \n");
+    }
+    ~B(){
+        printf("d B \n");
+    }
+};
+
+
+void func(A a) {
+    
+}
+
+
+
+string addString(string s1, string s2) {
+
+    string ans;
+    int carry = 0;
+    int i = 0;
+    while (1) {
+        int index1 = (int)s1.size() - 1 - i;
+        int index2 = (int)s2.size() - 1 - i;
+        i ++;
+        char ch1 = 0;
+        char ch2 = 0;
+        if (index1 < 0 && index2 < 0 && carry == 0) break;
+        if (index1 >= 0) ch1 = s1[index1] - '0';
+        if (index2 >= 0) ch2 = s2[index2] - '0';
+        char result = ch1 + ch2 + carry;
+        if (result > 9) {
+            carry = 1;
+            result -= 10;
+        } else carry = 0;
+        result += '0';
+        ans = result + ans;
+    }
+    
+    return ans;
+}
+
 extern void _03_09(const char *) {
+    
+//    B b;
+//    A a;
+////    A b(a)
+//    A &b = a;
+//    func(b);
+//
+//    string str = "123";
+//    int j = 100;
+//    while (j --) {
+//        printf("%d ",str[100-j]);
+//    }
+    
+    int j = 0;
+    while (j ++ < 1) {
+        printf("%d\n",j);
+    }
+    
+    [](int i){
+        printf("hello world %d \n",i);
+    }(100);
+    
+    
+    map<int,int> mat;
+    mat[10];
+    
+    printf("%d \n",mat.size());
+    mat.erase(10);
+    
+    printf("%d %d \n",mat.size(),mat[10]);
+
+    printf("%d \n",mat.size());
+
+    std::shared_ptr<int> ptr = new int;
+    
     
 //    std::list<int> a;
     

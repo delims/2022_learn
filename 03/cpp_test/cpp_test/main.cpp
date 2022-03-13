@@ -19,7 +19,7 @@ int main(int argc, const char * argv[]) {
 //    _03_06();
 //    _03_07();
     
-    printf("%s\n",argv[0]);
+//    printf("%s\n",argv[0]);
     
     _03_09(argv[1]);
 
