@@ -15,6 +15,11 @@
 #include <stdio.h>
 #include <string.h>
 #include <cstdlib>
+#include <thread>
+#include <vector>
+#include <mutex>
+
+void *tcp_client_read(void* arg);
 
 #pragma pack(1)
 
@@ -37,8 +42,13 @@ struct info_t {
     char id[16];
     info_t(){
         type = 1;
-        memcpy(id, "NJ4GKBOAV0000029", sizeof(id));
+        memcpy(id, "NA20220321000001", sizeof(id));
     }
+};
+
+struct tcp_task_start_t {
+    char type = 3;
+    char task_id[16];
 };
 
 char crc(const char* bytes, size_t size) {
@@ -48,10 +58,16 @@ char crc(const char* bytes, size_t size) {
     return res;
 }
 
+std::vector<char> send_buffer;
+std::mutex lock;
+
 int run_tcp_client () {
+    
     sockaddr_in server_addr_in;
     server_addr_in.sin_family = AF_INET;
-    server_addr_in.sin_addr.s_addr = inet_addr("127.0.0.1");
+//    server_addr_in.sin_addr.s_addr = inet_addr("127.0.0.1");
+//    server_addr_in.sin_addr.s_addr = inet_addr("192.168.14.12");
+    server_addr_in.sin_addr.s_addr = inet_addr("123.124.91.28");
     server_addr_in.sin_port = htons(16536);
     
     int sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
@@ -66,12 +82,13 @@ int run_tcp_client () {
         }
     }
     
-//    const char *str = "hello delims \n";
+    std::thread(tcp_client_read,(void*)(uintptr_t)sock).detach();
+    
+    //    const char *str = "hello delims \n";
     char buffer[1024] = {0};
     while (1) {
-//        sprintf(buffer, "% 6d\n",number++);
+        //        sprintf(buffer, "% 6d\n",number++);
         tcp_message msg;
-        
         info_t info;
         msg.length = sizeof(info);
         int totalsize = sizeof(msg) + sizeof(info) + 1;
@@ -82,9 +99,10 @@ int run_tcp_client () {
         write(sock, bytes, totalsize);
         free(bytes);
         
-#define coor_scale 100000000
+#define coor_scale   100000000
 #define coor_scale_1 0.00000001
         int count = 0;
+        int task_start_success = 0;
         while (1) {
             tcp_heart_t info;
             info.type = 2;
@@ -99,15 +117,86 @@ int run_tcp_client () {
             memcpy(bytes, &msg, sizeof(msg));
             memcpy(bytes + sizeof(msg), &info, sizeof(info));
             bytes[totalsize-1] = crc(bytes, totalsize-1);
-            write(sock, bytes, totalsize);
+            ssize_t write_ret = write(sock, bytes, totalsize);
+            printf("write %d bytes \n",write_ret);
             free(bytes);
             sleep(6);
-
+            
+            
+            
+            if(count > 4) {
+                if (task_start_success) {
+                    task_start_success = 0;
+                    std::vector<char> end_buffer;
+                    tcp_message msg;
+                    tcp_task_start_t info;
+                    info.type = 4;
+                    msg.length = sizeof(info);
+                    int totalsize = sizeof(msg) + sizeof(info) + 1;
+                    end_buffer.insert(end_buffer.end(), (const char * )&msg, (const char *)&msg+sizeof(msg));
+                    end_buffer.insert(end_buffer.end(), (const char * )&info, (const char *)&info+sizeof(info));
+                    end_buffer.push_back(crc((const char*)&info, sizeof(info)));
+                    send(sock, &end_buffer[0], end_buffer.size(), 0);
+                    printf("client sent %ld bytes\n",end_buffer.size());
+                }
+            }
+            
+            if (send_buffer.size() == 0) continue;
+            lock.lock();
+            //发送开始成功
+            send(sock, &send_buffer[0], send_buffer.size(), 0);
+            task_start_success = 1;
+            printf("client sent %ld bytes\n",send_buffer.size());
+            send_buffer.clear();
+            lock.unlock();
         }
         
-        
         printf("%s ",buffer);
+        
         sleep(6);
         
     }
+}
+
+void *tcp_client_read(void* arg) {
+    int sock = (int)(uintptr_t)arg;
+    
+    std::vector<char> receive_buffer;
+    
+    while (1) {
+        
+        char buffer[1024] = {0};
+        ssize_t size = recv(sock, buffer, sizeof(buffer), 0);
+        if (size <= 0) {
+            printf("server closed, client close ret =%d \n",close(sock));
+            break;;
+        }
+        printf("client receive %ld bytes\n",size);
+        receive_buffer.insert(receive_buffer.end(), buffer,buffer+size);
+        
+        lock.lock();
+        
+        
+        
+        
+        tcp_message msg;
+        tcp_task_start_t info;
+        msg.length = sizeof(info);
+        int totalsize = sizeof(msg) + sizeof(info) + 1;
+        
+        //        char *bytes = (char*) malloc(totalsize);
+        
+        send_buffer.insert(send_buffer.end(), (const char * )&msg, (const char *)&msg+sizeof(msg));
+        send_buffer.insert(send_buffer.end(), (const char * )&info, (const char *)&info+sizeof(info));
+        send_buffer.push_back(crc((const char*)&info, sizeof(info)));
+        
+        //        memcpy(bytes, &msg, sizeof(msg));
+        //        memcpy(bytes + sizeof(msg), &info, sizeof(info));
+        
+        lock.unlock();
+        
+    }
+    
+    
+    return nullptr;
 }
