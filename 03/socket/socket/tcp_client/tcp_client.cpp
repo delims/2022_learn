@@ -65,9 +65,9 @@ int run_tcp_client () {
     
     sockaddr_in server_addr_in;
     server_addr_in.sin_family = AF_INET;
-//    server_addr_in.sin_addr.s_addr = inet_addr("127.0.0.1");
+    server_addr_in.sin_addr.s_addr = inet_addr("127.0.0.1");
 //    server_addr_in.sin_addr.s_addr = inet_addr("192.168.14.12");
-    server_addr_in.sin_addr.s_addr = inet_addr("123.124.91.28");
+//    server_addr_in.sin_addr.s_addr = inet_addr("123.124.91.28");
     server_addr_in.sin_port = htons(16536);
     
     int sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
@@ -99,6 +99,10 @@ int run_tcp_client () {
         write(sock, bytes, totalsize);
         free(bytes);
         
+//        sleep(1);
+//        close(sock);
+//        return 0;
+//
 #define coor_scale   100000000
 #define coor_scale_1 0.00000001
         int count = 0;
@@ -116,9 +120,10 @@ int run_tcp_client () {
             char *bytes = (char*) malloc(totalsize);
             memcpy(bytes, &msg, sizeof(msg));
             memcpy(bytes + sizeof(msg), &info, sizeof(info));
-            bytes[totalsize-1] = crc(bytes, totalsize-1);
+            bytes[totalsize-1] = crc((const char *)&info, sizeof(info));
             ssize_t write_ret = write(sock, bytes, totalsize);
             printf("write %d bytes \n",write_ret);
+//            if (write_ret == -1 )
             free(bytes);
             sleep(6);
             
@@ -144,10 +149,10 @@ int run_tcp_client () {
             if (send_buffer.size() == 0) continue;
             lock.lock();
             //发送开始成功
-            send(sock, &send_buffer[0], send_buffer.size(), 0);
-            task_start_success = 1;
-            printf("client sent %ld bytes\n",send_buffer.size());
-            send_buffer.clear();
+//            send(sock, &send_buffer[0], send_buffer.size(), 0);
+//            task_start_success = 1;
+//            printf("client sent %ld bytes\n",send_buffer.size());
+//            send_buffer.clear();
             lock.unlock();
         }
         
@@ -172,13 +177,14 @@ void *tcp_client_read(void* arg) {
             break;;
         }
         printf("client receive %ld bytes\n",size);
+        int len = size;
+        for (int i = 0;i < len ;i ++) printf("%02x",buffer[i] & 0xFF);
+        printf("\n");
         receive_buffer.insert(receive_buffer.end(), buffer,buffer+size);
         
         lock.lock();
         
-        
-        
-        
+
         tcp_message msg;
         tcp_task_start_t info;
         msg.length = sizeof(info);

@@ -30,15 +30,61 @@ vector<int> GetLeastNumbers_Solution(vector<int> input, int k) {
     return res;
 }
 
+class ABC {
+public:
+    int a;
+    int b;
+    int c;
+    void func(){
+        printf("abc func \n");
+    }
+    
+};
+
+
+class ABCD {
+public:
+//    int a;
+    void func(){
+        printf("abcd func \n");
+    }
+};
+
+struct chendashen{
+    virtual void func(){
+        
+    }
+    
+    long a[1];
+    
+};
+
+
+//virpt
+//a[]
+
 void _03_21() {
     
-    vector<int> input({4,5,1,6,2,7,3,8});
+    chendashen c;
+    
+    printf("%d\n",sizeof(c));
+    printf("%p\n",c.a[-1]);
+
+//    vector<int> input({4,5,1,6,2,7,3,8});
+    
+//    ABCD o;
+//    (*((ABC*)&o)).func();
+//    printf("abcd %d \n",(*((ABC*)&o)).a);
+//    printf("abcd %d \n",(*((ABC*)&o)).b);
+
+//    for (int x : GetLeastNumbers_Solution(input, 4)) printf("%d ",x);
     
     
-    for (int x : GetLeastNumbers_Solution(input, 4)) printf("%d ",x);
-    
-    
+//    int a = *(int*)1;
 //    GetLeastNumbers_Solution(input, 4);
     
-    
+//    ABCD *a = NULL;
+//    a->func();
+//
+//    ((ABCD*)(NULL))->func();
 }
