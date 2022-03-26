@@ -18,7 +18,7 @@ int run_tcp_server(){
     sockaddr_in addr_in;
 //    sockaddr_in6 addr_in6;
     addr_in.sin_family = AF_INET;
-    addr_in.sin_port = htons(16536);
+    addr_in.sin_port = htons(3000);
 //    addr_in.sin_addr.s_addr = htonl(INADDR_ANY); //自动获取IP地址，或者使用指定IP地址
     addr_in.sin_addr.s_addr = inet_addr("127.0.0.1");
 

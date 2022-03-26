@@ -15,11 +15,14 @@
 
 extern void run_udp_server();
 extern void run_tcp_client();
+extern int run_tcp_server();
 
 int main(int argc, const char * argv[]) {
     // insert code here...
+    printf("%s\n",argv[0]);
 //    std::cout << "Hello, World!\n";
     run_tcp_client();
 //    run_udp_server();
+//    run_tcp_server();
     return 0;
 }

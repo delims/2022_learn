@@ -104,27 +104,31 @@ A testCopy(A a) {
     return a;
 }
 
+extern void _03_25();
+
 int main(int argc, const char * argv[]) {
+    
+    _03_25();
     
 //    A a;
 //    printf("%p \n",&a);
 //    printf("%p \n",&testCopy(a));
     
-    int array[] = {1,10,2,6,76,4,8};
-    size_t size = sizeof(array)/sizeof(int);
-    printf("size = %d \n",size);
-    insert_sort(array, size);
-    
-    for(int x : array) {
-        printf("%d \n",x);
-    }
+//    int array[] = {1,10,2,6,76,4,8};
+//    size_t size = sizeof(array)/sizeof(int);
+//    printf("size = %d \n",size);
+//    insert_sort(array, size);
+//
+//    for(int x : array) {
+//        printf("%d \n",x);
+//    }
     
 
-    char a[] = "1225";
-    char b[] = "12";
-    
-    printf("%d\n",strcmp(a, b));
-    printf("%d\n",'2');
+//    char a[] = "1225";
+//    char b[] = "12";
+//
+//    printf("%d\n",strcmp(a, b));
+//    printf("%d\n",'2');
 
     
 //    list<int> l;
