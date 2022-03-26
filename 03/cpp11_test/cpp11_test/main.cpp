@@ -64,7 +64,7 @@ public:
         printf("constructor\n");
     };//构造函数
     A(const A& a) { //拷贝构造函数
-        printf("copy \n");
+        printf("copy - constructor \n");
     };
     ~A() = default;//析构函数
     A& operator=(const A& a)  //赋值运算符重载
@@ -99,9 +99,11 @@ public:
 //    ~Apple(){}
 };
 
+static A qingbing;
+
 A testCopy(A a) {
-    printf("%p \n",&a);
-    return a;
+//    printf("%p \n",&a);
+    return qingbing;
 }
 
 extern void _03_25();
@@ -122,8 +124,9 @@ int main(int argc, const char * argv[]) {
 //    for(int x : array) {
 //        printf("%d \n",x);
 //    }
-    
 
+//
+//
 //    char a[] = "1225";
 //    char b[] = "12";
 //

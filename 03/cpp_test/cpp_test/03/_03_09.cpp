@@ -139,7 +139,6 @@ extern void _03_09(const char *) {
 
     printf("%d \n",mat.size());
 
-    std::shared_ptr<int> ptr = new int;
     
     
 //    std::list<int> a;

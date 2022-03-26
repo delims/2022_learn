@@ -76,7 +76,7 @@ vector<vector<int> > threeSum(vector<int>& num) {
     return res;
 }
 
-void _03_18() {
+//void _03_18() {
     
 //    std::queue<int*> q;
 //
@@ -84,11 +84,58 @@ void _03_18() {
 //    q.push(nullptr);
 //    q.push(nullptr);
 
-    vector<int> array = {-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6};
-    threeSum(array);
+//    vector<int> array = {-4,-2,-2,-2,0,1,2,2,2,3,3,4,4,6,6};
+//    threeSum(array);
     
 //    printf("%d\n",q.size());
-    
-    
-    
+#include <unistd.h>
+#include <sys/syscall.h>
+
+using namespace std;
+
+int minNumberDisappeared(vector<int>& nums) {
+    // write code here
+    int n = nums.size();
+    int size = n / 8 + 1;
+    unsigned char* m = (unsigned char*)malloc(size);
+    memset(m, 0xff, size);
+
+    for (int x : nums) {
+        if (x > n + 1 || x < 1) continue;
+        x -= 1;
+        int i = x / 8;
+        int j = x % 8;
+        if (m[i] & (1 << j)) m[i] &= ~(1 << j);
+    }
+    int k = -1;
+    while (++k < n+1) {
+        int i = k / 8;
+        int j = k % 8;
+        if (m[i] & (1<<j)) {
+            
+            return k + 1;
+        }
+    }
+    free(m);
+    return 0;
 }
+
+class A {
+private:
+    int a;
+    int b;
+protected:
+    int c;
+public:
+    int d;
+};
+
+
+class B : public A {
+public:
+    
+    void func() {
+        c = 120;
+        printf("=%d \n",c);
+    }
+};
