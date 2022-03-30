@@ -63,12 +63,40 @@ struct chendashen{
 //virpt
 //a[]
 
+
+class X {
+public:
+    int a;
+    int b;
+public:
+    void func() {
+        printf("%d \n",a);
+    }
+};
+
+class Y {
+public:
+    int x;
+    int y;
+public:
+    void func2() {
+        printf("%d \n",y);
+    }
+};
+
+
+
 void _03_21() {
     
-    chendashen c;
+    X x;
+    x.b = 100200;
     
-    printf("%d\n",sizeof(c));
-    printf("%p\n",c.a[-1]);
+    ((Y*)&x)->func2();
+    
+//    chendashen c;
+    
+//    printf("%d\n",sizeof(c));
+//    printf("%p\n",c.a[-1]);
 
 //    vector<int> input({4,5,1,6,2,7,3,8});
     
