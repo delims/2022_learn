@@ -10,10 +10,11 @@
 #include <vector>
 #include <thread>
 
-//extern void _03_07();
-//extern void _03_14();
-//extern void _03_18();
+extern void _03_07();
+extern void _03_14();
+extern void _03_18();
 extern void _03_21();
+extern void _03_30();
 
 struct ABC {
     ABC(int &i,int &j):a(i),b(j){}
@@ -122,7 +123,7 @@ int main(int argc, const char * argv[]) {
     
 //    _03_14();
     
-    _03_21();
+    _03_30();
 
 //    c.a = 120;
     
