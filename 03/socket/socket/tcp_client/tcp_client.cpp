@@ -40,15 +40,15 @@ struct from_tcp_heart_t {
 
 struct from_tcp_device_info_t {
     char type = 1;
-    char device_no[16];
+    char device_no[8];
 };
 
 struct info_t {
     char type = 1;
-    char id[16];
+    char id[8];
     info_t(){
         type = 1;
-        memcpy(id, "NA20220321000001", sizeof(id));
+        memcpy(id, "21003168", sizeof(id));
     }
 };
 

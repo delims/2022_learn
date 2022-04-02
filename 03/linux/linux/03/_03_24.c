@@ -13,12 +13,25 @@
 
 void _03_24(void)
 {
-    pid_t pid = getpid();
-    void *p = malloc(10);
+//    pid_t pid = getpid();
+//    void *p = malloc(10);
     
-    int arr[1024*1024];
-    memset(arr, 0, sizeof(arr));
-    pause();
-    printf("%d\n",pid);
+    int a = 0;
+    int b = 0;
+    int c = 0;
+    printf("%p \n",&a);
+    printf("%p \n",&b);
+    printf("%p \n",&c);
+    int *p = &c;
+    
+    int *p2 = p + 256 * 4;
+    
+    printf("%p \n",p2);
+    printf("%d \n",*p2);
+
+//    int arr[1024*1024];
+//    memset(arr, 0, sizeof(arr));
+//    pause();
+//    printf("%d\n",pid);
     
 }
