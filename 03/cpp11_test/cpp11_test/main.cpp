@@ -214,7 +214,7 @@ int main(int argc, const char * argv[]) {
 //    vector<int> a(100,0);
     
     
-    cout << "\n";
+//    cout << "\n";
 
     return 0;
 }

@@ -16,47 +16,18 @@ extern void _03_18();
 extern void _03_21();
 extern void _03_30();
 extern void _04_01();
+extern void _04_04();
+extern void _04_05();
+extern void _04_06();
 
 
 int main(int argc, const char * argv[]) {
     
-//    QingBing a;
-//    int i;
-//    int j;
-//    ABC a(i,j);
-//
-//    int array[] = {2,4,5,2,34523,453,65,65,67,67,34,32,2,34,5,11,2,34,534,46,67,78,43};
-//
-//
-//    quick_sort(array, 0, sizeof(array)/sizeof(int)-1);
-//
-//    for (int x: array) printf("%d ",x);
-    
-//    C c;
-//    c.X::func();
-//
-//    char *str = "0.361r";
-//    char *p;
-//    int d = strtod(str, &str);
-//    printf("%lu :%s \n",d,str);
-
-    
-    
-//    _03_09(argv[1]);
-    
-//    _03_14();
-    
-//    _03_30();
-
-//    c.a = 120;
-    
-//    printf("%lu \n",sizeof(c));
-//    printf("%lu \n",c.a);
-
-//    printf("%d\n",sizeof(a));
-    
-    _04_01();
-    
+    printf("%s\n",argv[0]);
+//    _04_01();
+//    _04_04();
+//    _04_05();
+    _04_06();
     return 0;
 }
 

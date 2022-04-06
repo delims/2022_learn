@@ -40,9 +40,22 @@ void func(std::future<obj>& fut) {
 //    cout << "child" << std::this_thread::get_id() << endl;
 }
 
+static int func2() {
+    
+    
+    return 2;
+}
+
+static void func1() {
+    
+    func2();
+}
+
+
 
 void _03_25() {
 
+    func1();
 //    int arr[2][2] = {{1,2},{3,4}};
 //    int **ptr = (int**)arr;
 //    printf("%d\n",*ptr);

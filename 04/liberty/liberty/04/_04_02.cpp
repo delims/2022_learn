@@ -24,23 +24,28 @@ void func3() {
 //    *(p+2) = addr;
 //}
 
-void func1() {
-        
-    long a = 1;
-    long *p = &a;
-    uintptr_t addr = (uintptr_t)func3;
-    *(p+2) = addr;
+
+
+static void func() {
+    long i;
+    int value = *((int*)(&i + 4) + 1);
+    printf("a = %x\n",value);
 }
-
-
-
-
-
 
 int _04_02()
 {
-    func1();
+    float a = 1;
+//    int a = 0xabcdef;
+    func();
+    
+    
     
     return 0;
-    
 }
+
+
+
+
+//long a;
+//int value = *((int*)(&a + 3 + 1) + 1);
+//printf("a = %x\n",value);
