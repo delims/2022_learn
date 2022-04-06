@@ -10,13 +10,14 @@
 #include <sys/ipc.h>
 #include <string.h>
 #include <errno.h>
-
+#include <unistd.h>
 
 class _Apple {
 public:
 //    _Apple(int x,int y){}
     int a;
     int b;
+//    初始化列表和构造函数内赋值，生成汇编代码完全一致
 //    _Apple(int x,int y):a(x),b(y) {
 //        cpp_test`_Apple::_Apple:
 //            0x10000b470 <+0>:  pushq  %rbp
@@ -52,6 +53,13 @@ public:
     
 };
 
+//template<typename T, typename... Args>
+//void foo(const T& t, const Args&... rest) {
+//    std::cout << sizeof(T) << endl;
+//    cout << sizeof...(Args) << endl;//打印可变参数数量
+//    cout << sizeof...(rest) << endl;//打印可变参数数量
+//}
+
 
 void _04_05() {
     
@@ -61,14 +69,18 @@ void _04_05() {
 //    int y;
 //
     
+    int a = 1 ? 2 : 3;
     
+    key_t key = ftok("./", 12);
+    int shid = shmget(key, 64, IPC_CREAT| SHM_R | SHM_W);
+    printf("ret = %d  %s \n",shid,strerror(errno));
+    void *p = shmat(shid, nullptr, SHM_R);
+    printf("ret = %p  %s \n",p,strerror(errno));
     
+//    *(long*)p = 0x112211;
     
-//    key_t key = ftok("./", 88);
-//
-//    int shid = shmget(IPC_PRIVATE, 8, IPC_CREAT);
-//    printf("ret = %d  %s \n",shid,strerror(errno));
-//    void *p = shmat(shid, nullptr, SHM_R);
-//    printf("ret = %p  %s \n",p,strerror(errno));
+    printf("%lx\n",*(long*)p);
+    
+    pause();
 
 }
