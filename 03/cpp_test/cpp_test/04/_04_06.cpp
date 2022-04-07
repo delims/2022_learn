@@ -5,9 +5,9 @@
 //  Created by delims on 2022/4/6.
 //
 
-#include "_04_06.hpp"
 #include <unistd.h>
 #include <fcntl.h>
+#include <stdio.h>
 
 struct Apple {
     int a;

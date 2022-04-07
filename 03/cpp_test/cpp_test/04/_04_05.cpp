@@ -5,13 +5,12 @@
 //  Created by delims on 2022/4/5.
 //
 
-#include "_04_05.hpp"
 #include <sys/shm.h>
 #include <sys/ipc.h>
 #include <string.h>
 #include <errno.h>
 #include <unistd.h>
-
+#include <stdio.h>
 class _Apple {
 public:
 //    _Apple(int x,int y){}

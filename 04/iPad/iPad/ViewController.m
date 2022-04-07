@@ -42,7 +42,9 @@ int func() {
     int *p = &a;
     NSLog(@"%p",p);
     
+//    DISPATCH_DECL(name) typedef struct name##_s *name##_t
     NSLog(@"%s",__func__);
+    dispatch_get_main_queue()
     func();
     // Do any additional setup after loading the view.
 }

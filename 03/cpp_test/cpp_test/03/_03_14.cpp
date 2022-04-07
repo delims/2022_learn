@@ -5,7 +5,7 @@
 //  Created by delims on 2022/3/14.
 //
 
-#include "_03_14.hpp"
+#include <stdio.h>
 #include <iostream>
 #include <vector>
 using namespace std;

@@ -5,7 +5,7 @@
 //  Created by delims on 2022/4/5.
 //
 
-#include "_04_04.hpp"
+#include <stdio.h>
 
 static void func2() {
     

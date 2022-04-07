@@ -5,13 +5,12 @@
 //  Created by delims on 2022/4/1.
 //
 
-#include "04_01.hpp"
-
 //class __04_01
 //{
 //    char member;
 //};
 
+#include <stdio.h>
 
 
 
