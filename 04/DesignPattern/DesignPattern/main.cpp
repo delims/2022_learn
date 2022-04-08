@@ -18,7 +18,7 @@ extern void test_TemplatePattern();
 
 int main(int argc, const char * argv[]) {
         
-    test_TemplatePattern();
+    test_Singleton();
     
     return 0;
 }

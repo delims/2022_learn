@@ -25,13 +25,12 @@ public:
         printf("create singleton \n");
     }
     static Singleton* shared() {
+        if (instance) return instance;
+        _lock.lock();
         if (instance == NULL) {
-            _lock.lock();
-            if (instance == NULL) {
-                instance = new Singleton();
-            }
-            _lock.unlock();
+            instance = new Singleton();
         }
+        _lock.unlock();
         return instance;
     }
     void print() {
@@ -41,6 +40,7 @@ public:
 
 void runThread() {
     Singleton *shared = Singleton::shared();
+    printf("size = %d\n",sizeof(*shared));
     shared->print();
 }
 
