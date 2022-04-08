@@ -29,6 +29,9 @@
 		4F8EDAB627FEE3A9001E86E4 /* MemometoPattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F8EDAB527FEE3A9001E86E4 /* MemometoPattern.cpp */; };
 		4F8EDAB827FEE43D001E86E4 /* ObserverPattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F8EDAB727FEE43D001E86E4 /* ObserverPattern.cpp */; };
 		4F8EDABB27FEE585001E86E4 /* StatusPattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F8EDABA27FEE585001E86E4 /* StatusPattern.cpp */; };
+		4F8F192428002FF00047977F /* NullObjectPattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F8F192328002FF00047977F /* NullObjectPattern.cpp */; };
+		4F8F1926280031870047977F /* StrategyPattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F8F1925280031870047977F /* StrategyPattern.cpp */; };
+		4F8F192828003FFB0047977F /* TemplatePattern.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F8F192728003FFB0047977F /* TemplatePattern.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -67,6 +70,9 @@
 		4F8EDAB527FEE3A9001E86E4 /* MemometoPattern.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MemometoPattern.cpp; sourceTree = "<group>"; };
 		4F8EDAB727FEE43D001E86E4 /* ObserverPattern.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = ObserverPattern.cpp; sourceTree = "<group>"; };
 		4F8EDABA27FEE585001E86E4 /* StatusPattern.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StatusPattern.cpp; sourceTree = "<group>"; };
+		4F8F192328002FF00047977F /* NullObjectPattern.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = NullObjectPattern.cpp; sourceTree = "<group>"; };
+		4F8F1925280031870047977F /* StrategyPattern.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = StrategyPattern.cpp; sourceTree = "<group>"; };
+		4F8F192728003FFB0047977F /* TemplatePattern.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = TemplatePattern.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +135,9 @@
 				4F8EDAB527FEE3A9001E86E4 /* MemometoPattern.cpp */,
 				4F8EDAB727FEE43D001E86E4 /* ObserverPattern.cpp */,
 				4F8EDABA27FEE585001E86E4 /* StatusPattern.cpp */,
+				4F8F192328002FF00047977F /* NullObjectPattern.cpp */,
+				4F8F1925280031870047977F /* StrategyPattern.cpp */,
+				4F8F192728003FFB0047977F /* TemplatePattern.cpp */,
 			);
 			path = pattern;
 			sourceTree = "<group>";
@@ -195,12 +204,15 @@
 				4F8EDA8727FEB835001E86E4 /* main.cpp in Sources */,
 				4F8EDAB027FEE07C001E86E4 /* InterpreterPattern.cpp in Sources */,
 				4F8EDAA827FEDAD4001E86E4 /* ProxyPattern.cpp in Sources */,
+				4F8F1926280031870047977F /* StrategyPattern.cpp in Sources */,
+				4F8F192428002FF00047977F /* NullObjectPattern.cpp in Sources */,
 				4F8EDAA227FED7B2001E86E4 /* DecoratorPattern.cpp in Sources */,
 				4F8EDA9627FEC76D001E86E4 /* BuilderPattern.cpp in Sources */,
 				4F8EDA9427FEBED9001E86E4 /* Singleton.cpp in Sources */,
 				4F8EDAA427FED8E2001E86E4 /* FacadePattern.cpp in Sources */,
 				4F8EDAA627FEDA0C001E86E4 /* FlyweightPattern.cpp in Sources */,
 				4F8EDA9027FEB86B001E86E4 /* FactoryPattern.cpp in Sources */,
+				4F8F192828003FFB0047977F /* TemplatePattern.cpp in Sources */,
 				4F8EDA9227FEBC80001E86E4 /* AbstractFactoryPattern.cpp in Sources */,
 				4F8EDA9C27FED089001E86E4 /* BridgePattern.cpp in Sources */,
 				4F8EDA9827FECCF3001E86E4 /* PrototypePattern.cpp in Sources */,
