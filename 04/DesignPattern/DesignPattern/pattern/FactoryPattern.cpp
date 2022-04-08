@@ -25,7 +25,7 @@
  
 */
 
-
+//
 //enum shape_t {
 //    shape_rectangle,
 //    shape_square,
@@ -65,8 +65,7 @@
 //            case shape_circle:      return new Circle();
 //            case shape_square:      return new Square();
 //            case shape_rectangle:   return new Rectangle();
-//            default:
-//                break;
+//            default: break;
 //        }
 //        return new Shape();
 //    }

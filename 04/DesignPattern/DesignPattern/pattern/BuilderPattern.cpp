@@ -21,6 +21,7 @@ using namespace std;
 class Packing {
 public:
     virtual string pack() = 0;
+    virtual ~Packing(){}
 };
 
 class Item {
@@ -28,6 +29,7 @@ public:
     virtual string name() = 0;
     virtual Packing *packing() = 0;
     virtual float price() = 0;
+    virtual ~Item(){};
 };
 
 //创建实现 Packing 接口的实体类。
@@ -49,12 +51,18 @@ public:
 //创建实现 Item 接口的抽象类，该类提供了默认的功能。
 
 class Burger : public Item {
+private:
+    Packing* _packing;
 public:
     Packing *packing() {
-        return new Wrapper();
+        _packing = new Wrapper();
+        return _packing;
     };
     virtual float price() {
         return 0;
+    }
+    ~Burger(){
+        delete _packing;
     }
 };
 
@@ -132,6 +140,9 @@ public:
             printf("price: %f \n",item->price());
         }
     }
+    ~Meal(){
+        for (Item* item: items) delete item;
+    }
 };
 
 //创建一个 MealBuilder 类，实际的 builder 类负责创建 Meal 对象。
@@ -153,7 +164,7 @@ public:
 };
 
 
-void test_DesignPattern() {
+void test_BuilderPattern() {
     MealBuilder *mealBuilder = new MealBuilder();
     Meal *vegMeal = mealBuilder->prepareVegMeal();
     
@@ -167,4 +178,9 @@ void test_DesignPattern() {
     printf("Non Veg Meal: \n");
     nonVegMeal->showItems();
     printf("Non Veg Meal cost : %f\n",nonVegMeal->getCost());
+    
+    delete vegMeal;
+    delete nonVegMeal;
+    delete mealBuilder;
+
 }

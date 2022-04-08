@@ -10,6 +10,7 @@
 extern void test_FactoryPattern();
 extern void test_AbstractFactoryPattern();
 extern void test_Singleton();
+extern void test_BuilderPattern();
 extern void test_PrototypePattern();
 extern void test_BridgePattern();
 extern void test_StatusPattern();
@@ -18,7 +19,7 @@ extern void test_TemplatePattern();
 
 int main(int argc, const char * argv[]) {
         
-    test_Singleton();
+    test_BuilderPattern();
     
     return 0;
 }
