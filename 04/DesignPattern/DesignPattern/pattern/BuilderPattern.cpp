@@ -165,6 +165,9 @@ public:
 
 
 void test_BuilderPattern() {
+    
+    printf("%p\n",test_BuilderPattern);
+    
     MealBuilder *mealBuilder = new MealBuilder();
     Meal *vegMeal = mealBuilder->prepareVegMeal();
     

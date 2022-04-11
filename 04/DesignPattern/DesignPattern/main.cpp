@@ -19,7 +19,7 @@ extern void test_TemplatePattern();
 
 int main(int argc, const char * argv[]) {
         
-    test_BuilderPattern();
+    test_FactoryPattern();
     
     return 0;
 }

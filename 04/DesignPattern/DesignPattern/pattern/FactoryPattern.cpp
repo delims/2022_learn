@@ -25,63 +25,85 @@
  
 */
 
-//
-//enum shape_t {
-//    shape_rectangle,
-//    shape_square,
-//    shape_circle,
-//    shape_other,
-//};
-//
-//class Shape {
-//public:
-//    virtual void draw() {
-//        printf("draw Shape\n");
-//    };
-//};
-//
-//class Rectangle : public Shape {
-//    void draw() {
-//        printf("draw Rectangle\n");
-//    }
-//};
-//
-//class Square : public Shape {
-//    void draw() {
-//        printf("draw Square\n");
-//    }
-//};
-//
-//class Circle : public Shape {
-//    void draw() {
-//        printf("draw Circle\n");
-//    }
-//};
-//
-//class ShapeFactory {
-//public:
-//    static Shape* getShape(shape_t type) {
-//        switch (type) {
-//            case shape_circle:      return new Circle();
-//            case shape_square:      return new Square();
-//            case shape_rectangle:   return new Rectangle();
-//            default: break;
-//        }
-//        return new Shape();
-//    }
-//};
-//
-//void test_FactoryPattern()
-//{
+
+enum shape_t {
+    shape_rectangle,
+    shape_square,
+    shape_circle,
+    shape_other,
+};
+
+class Shape {
+public:
+    virtual void draw() {
+        printf("draw Shape\n");
+    };
+    virtual void draw2() {
+        printf("draw Shape2\n");
+
+    }
+};
+
+class Rectangle : public Shape {
+    void draw() {
+        printf("draw Rectangle\n");
+    }
+};
+
+class Square : public Shape {
+    void draw() {
+        printf("draw Square\n");
+    }
+};
+
+class Circle : public Shape {
+    void draw() {
+        printf("draw Circle\n");
+    }
+};
+
+class ShapeFactory {
+public:
+    static Shape* getShape(shape_t type) {
+        switch (type) {
+            case shape_circle:      return new Circle();
+            case shape_square:      return new Square();
+            case shape_rectangle:   return new Rectangle();
+            default: break;
+        }
+        return new Shape();
+    }
+};
+
+void test_FactoryPattern()
+{
 //    Shape *square = ShapeFactory::getShape(shape_square);
 //    square->draw();
-//    
+//
 //    Shape *circle = ShapeFactory::getShape(shape_circle);
 //    circle->draw();
 //
 //    Shape *rectangle = ShapeFactory::getShape(shape_rectangle);
 //    rectangle->draw();
-//    
-//    Shape *shape = ShapeFactory::getShape(shape_other);
-//    shape->draw();
-//}
+    
+    Shape *shape = ShapeFactory::getShape(shape_other);
+    shape->draw2();
+    
+//   通过汇编语言分析虚函数调用
+//    DesignPattern`test_FactoryPattern:
+//        0x100006970 <+0>:  pushq  %rbp // rbp 入栈
+//        0x100006971 <+1>:  movq   %rsp, %rbp // 更新当前函数 rbp
+//        0x100006974 <+4>:  subq   $0x10, %rsp //开16字节栈空间
+//        0x100006978 <+8>:  movl   $0x3, %edi //传入 shape_other 参数
+//        0x10000697d <+13>: callq  0x1000069a0 //调用getShape()函数
+//        0x100006982 <+18>: movq   %rax, -0x8(%rbp) //拿到返回值 shape 指针 存入当前函数栈
+//        0x100006986 <+22>: movq   -0x8(%rbp), %rdi //shape指针传入rdi用于传参
+//        0x10000698a <+26>: movq   (%rdi), %rax //取出 shape指针指向的内存的8个字节，这8个字节是虚表指针
+//        0x10000698d <+29>: callq  *0x8(%rax) //虚表指针+8，即虚表第二个函数。调用 draw2()
+//        0x100006990 <+32>: addq   $0x10, %rsp //rsp 水位下降
+//        0x100006994 <+36>: popq   %rbp // rbp 出栈
+//        0x100006995 <+37>: retq // 函数返回
+    
+    
+    
+}
