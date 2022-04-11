@@ -1,0 +1,600 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4F204C712803C645006FEA69 /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4F204C702803C645006FEA69 /* AppDelegate.mm */; };
+		4F204C772803C645006FEA69 /* ViewController.mm in Sources */ = {isa = PBXBuildFile; fileRef = 4F204C762803C645006FEA69 /* ViewController.mm */; };
+		4F204C7A2803C645006FEA69 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F204C782803C645006FEA69 /* Main.storyboard */; };
+		4F204C7C2803C648006FEA69 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4F204C7B2803C648006FEA69 /* Assets.xcassets */; };
+		4F204C7F2803C648006FEA69 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4F204C7D2803C648006FEA69 /* LaunchScreen.storyboard */; };
+		4F204C822803C648006FEA69 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F204C812803C648006FEA69 /* main.m */; };
+		4F204C8C2803C649006FEA69 /* Mp3EncoderTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F204C8B2803C649006FEA69 /* Mp3EncoderTests.m */; };
+		4F204C962803C649006FEA69 /* Mp3EncoderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F204C952803C649006FEA69 /* Mp3EncoderUITests.m */; };
+		4F204C982803C649006FEA69 /* Mp3EncoderUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F204C972803C649006FEA69 /* Mp3EncoderUITestsLaunchTests.m */; };
+		4F204CA62803C7C1006FEA69 /* Mp3Encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F204CA42803C7C1006FEA69 /* Mp3Encoder.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4F204C882803C649006FEA69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F204C642803C645006FEA69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F204C6B2803C645006FEA69;
+			remoteInfo = Mp3Encoder;
+		};
+		4F204C922803C649006FEA69 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4F204C642803C645006FEA69 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4F204C6B2803C645006FEA69;
+			remoteInfo = Mp3Encoder;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4F204C6C2803C645006FEA69 /* Mp3Encoder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Mp3Encoder.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F204C6F2803C645006FEA69 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4F204C702803C645006FEA69 /* AppDelegate.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = AppDelegate.mm; sourceTree = "<group>"; };
+		4F204C752803C645006FEA69 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
+		4F204C762803C645006FEA69 /* ViewController.mm */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.objcpp; path = ViewController.mm; sourceTree = "<group>"; };
+		4F204C792803C645006FEA69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		4F204C7B2803C648006FEA69 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		4F204C7E2803C648006FEA69 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		4F204C802803C648006FEA69 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4F204C812803C648006FEA69 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4F204C872803C649006FEA69 /* Mp3EncoderTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mp3EncoderTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F204C8B2803C649006FEA69 /* Mp3EncoderTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mp3EncoderTests.m; sourceTree = "<group>"; };
+		4F204C912803C649006FEA69 /* Mp3EncoderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = Mp3EncoderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4F204C952803C649006FEA69 /* Mp3EncoderUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mp3EncoderUITests.m; sourceTree = "<group>"; };
+		4F204C972803C649006FEA69 /* Mp3EncoderUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mp3EncoderUITestsLaunchTests.m; sourceTree = "<group>"; };
+		4F204CA42803C7C1006FEA69 /* Mp3Encoder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mp3Encoder.cpp; sourceTree = "<group>"; };
+		4F204CA52803C7C1006FEA69 /* Mp3Encoder.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Mp3Encoder.hpp; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4F204C692803C645006FEA69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F204C842803C649006FEA69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F204C8E2803C649006FEA69 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		4F204C632803C645006FEA69 = {
+			isa = PBXGroup;
+			children = (
+				4F204C6E2803C645006FEA69 /* Mp3Encoder */,
+				4F204C8A2803C649006FEA69 /* Mp3EncoderTests */,
+				4F204C942803C649006FEA69 /* Mp3EncoderUITests */,
+				4F204C6D2803C645006FEA69 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4F204C6D2803C645006FEA69 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4F204C6C2803C645006FEA69 /* Mp3Encoder.app */,
+				4F204C872803C649006FEA69 /* Mp3EncoderTests.xctest */,
+				4F204C912803C649006FEA69 /* Mp3EncoderUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4F204C6E2803C645006FEA69 /* Mp3Encoder */ = {
+			isa = PBXGroup;
+			children = (
+				4F204C6F2803C645006FEA69 /* AppDelegate.h */,
+				4F204C702803C645006FEA69 /* AppDelegate.mm */,
+				4F204C7B2803C648006FEA69 /* Assets.xcassets */,
+				4F204C802803C648006FEA69 /* Info.plist */,
+				4F204C7D2803C648006FEA69 /* LaunchScreen.storyboard */,
+				4F204C812803C648006FEA69 /* main.m */,
+				4F204C782803C645006FEA69 /* Main.storyboard */,
+				4F204CA42803C7C1006FEA69 /* Mp3Encoder.cpp */,
+				4F204CA52803C7C1006FEA69 /* Mp3Encoder.hpp */,
+				4F204C752803C645006FEA69 /* ViewController.h */,
+				4F204C762803C645006FEA69 /* ViewController.mm */,
+			);
+			path = Mp3Encoder;
+			sourceTree = "<group>";
+		};
+		4F204C8A2803C649006FEA69 /* Mp3EncoderTests */ = {
+			isa = PBXGroup;
+			children = (
+				4F204C8B2803C649006FEA69 /* Mp3EncoderTests.m */,
+			);
+			path = Mp3EncoderTests;
+			sourceTree = "<group>";
+		};
+		4F204C942803C649006FEA69 /* Mp3EncoderUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4F204C952803C649006FEA69 /* Mp3EncoderUITests.m */,
+				4F204C972803C649006FEA69 /* Mp3EncoderUITestsLaunchTests.m */,
+			);
+			path = Mp3EncoderUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4F204C6B2803C645006FEA69 /* Mp3Encoder */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F204C9B2803C649006FEA69 /* Build configuration list for PBXNativeTarget "Mp3Encoder" */;
+			buildPhases = (
+				4F204C682803C645006FEA69 /* Sources */,
+				4F204C692803C645006FEA69 /* Frameworks */,
+				4F204C6A2803C645006FEA69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Mp3Encoder;
+			productName = Mp3Encoder;
+			productReference = 4F204C6C2803C645006FEA69 /* Mp3Encoder.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4F204C862803C649006FEA69 /* Mp3EncoderTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F204C9E2803C649006FEA69 /* Build configuration list for PBXNativeTarget "Mp3EncoderTests" */;
+			buildPhases = (
+				4F204C832803C649006FEA69 /* Sources */,
+				4F204C842803C649006FEA69 /* Frameworks */,
+				4F204C852803C649006FEA69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F204C892803C649006FEA69 /* PBXTargetDependency */,
+			);
+			name = Mp3EncoderTests;
+			productName = Mp3EncoderTests;
+			productReference = 4F204C872803C649006FEA69 /* Mp3EncoderTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		4F204C902803C649006FEA69 /* Mp3EncoderUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4F204CA12803C649006FEA69 /* Build configuration list for PBXNativeTarget "Mp3EncoderUITests" */;
+			buildPhases = (
+				4F204C8D2803C649006FEA69 /* Sources */,
+				4F204C8E2803C649006FEA69 /* Frameworks */,
+				4F204C8F2803C649006FEA69 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4F204C932803C649006FEA69 /* PBXTargetDependency */,
+			);
+			name = Mp3EncoderUITests;
+			productName = Mp3EncoderUITests;
+			productReference = 4F204C912803C649006FEA69 /* Mp3EncoderUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4F204C642803C645006FEA69 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					4F204C6B2803C645006FEA69 = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					4F204C862803C649006FEA69 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 4F204C6B2803C645006FEA69;
+					};
+					4F204C902803C649006FEA69 = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = 4F204C6B2803C645006FEA69;
+					};
+				};
+			};
+			buildConfigurationList = 4F204C672803C645006FEA69 /* Build configuration list for PBXProject "Mp3Encoder" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 4F204C632803C645006FEA69;
+			productRefGroup = 4F204C6D2803C645006FEA69 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4F204C6B2803C645006FEA69 /* Mp3Encoder */,
+				4F204C862803C649006FEA69 /* Mp3EncoderTests */,
+				4F204C902803C649006FEA69 /* Mp3EncoderUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4F204C6A2803C645006FEA69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F204C7F2803C648006FEA69 /* LaunchScreen.storyboard in Resources */,
+				4F204C7C2803C648006FEA69 /* Assets.xcassets in Resources */,
+				4F204C7A2803C645006FEA69 /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F204C852803C649006FEA69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F204C8F2803C649006FEA69 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4F204C682803C645006FEA69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F204C772803C645006FEA69 /* ViewController.mm in Sources */,
+				4F204C712803C645006FEA69 /* AppDelegate.mm in Sources */,
+				4F204C822803C648006FEA69 /* main.m in Sources */,
+				4F204CA62803C7C1006FEA69 /* Mp3Encoder.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F204C832803C649006FEA69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F204C8C2803C649006FEA69 /* Mp3EncoderTests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4F204C8D2803C649006FEA69 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4F204C982803C649006FEA69 /* Mp3EncoderUITestsLaunchTests.m in Sources */,
+				4F204C962803C649006FEA69 /* Mp3EncoderUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4F204C892803C649006FEA69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F204C6B2803C645006FEA69 /* Mp3Encoder */;
+			targetProxy = 4F204C882803C649006FEA69 /* PBXContainerItemProxy */;
+		};
+		4F204C932803C649006FEA69 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4F204C6B2803C645006FEA69 /* Mp3Encoder */;
+			targetProxy = 4F204C922803C649006FEA69 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4F204C782803C645006FEA69 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F204C792803C645006FEA69 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		4F204C7D2803C648006FEA69 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4F204C7E2803C648006FEA69 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4F204C992803C649006FEA69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4F204C9A2803C649006FEA69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4F204C9C2803C649006FEA69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79YNH6CFRS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mp3Encoder/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.delims.Mp3Encoder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		4F204C9D2803C649006FEA69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79YNH6CFRS;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Mp3Encoder/Info.plist;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.delims.Mp3Encoder;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		4F204C9F2803C649006FEA69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79YNH6CFRS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.delims.Mp3EncoderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mp3Encoder.app/Mp3Encoder";
+			};
+			name = Debug;
+		};
+		4F204CA02803C649006FEA69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79YNH6CFRS;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.delims.Mp3EncoderTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/Mp3Encoder.app/Mp3Encoder";
+			};
+			name = Release;
+		};
+		4F204CA22803C649006FEA69 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79YNH6CFRS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.delims.Mp3EncoderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mp3Encoder;
+			};
+			name = Debug;
+		};
+		4F204CA32803C649006FEA69 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 79YNH6CFRS;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.delims.Mp3EncoderUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = Mp3Encoder;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4F204C672803C645006FEA69 /* Build configuration list for PBXProject "Mp3Encoder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F204C992803C649006FEA69 /* Debug */,
+				4F204C9A2803C649006FEA69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F204C9B2803C649006FEA69 /* Build configuration list for PBXNativeTarget "Mp3Encoder" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F204C9C2803C649006FEA69 /* Debug */,
+				4F204C9D2803C649006FEA69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F204C9E2803C649006FEA69 /* Build configuration list for PBXNativeTarget "Mp3EncoderTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F204C9F2803C649006FEA69 /* Debug */,
+				4F204CA02803C649006FEA69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4F204CA12803C649006FEA69 /* Build configuration list for PBXNativeTarget "Mp3EncoderUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4F204CA22803C649006FEA69 /* Debug */,
+				4F204CA32803C649006FEA69 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4F204C642803C645006FEA69 /* Project object */;
+}
