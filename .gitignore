@@ -62,3 +62,7 @@ fastlane/test_output
 
 iOSInjectionProject/
 .DS_Store
+*.o
+*.Plo
+*.a
+*.lo

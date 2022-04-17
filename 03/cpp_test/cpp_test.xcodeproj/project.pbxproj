@@ -15,8 +15,9 @@
 		4F4C768327D6ECEA00A6135E /* _03_06.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C767E27D6ECEA00A6135E /* _03_06.cpp */; };
 		4F4C768427D6ECEA00A6135E /* _03_07.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C767F27D6ECEA00A6135E /* _03_07.cpp */; };
 		4F4C768527D6ECEA00A6135E /* _03_05.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C768027D6ECEA00A6135E /* _03_05.cpp */; };
+		4F7E26EF280BB12F002FA328 /* _04_17.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7E26EE280BB12F002FA328 /* _04_17.cpp */; };
 		4F808B3427FD6AA100D103FA /* _04_06.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F808B3227FD6AA100D103FA /* _04_06.cpp */; };
-		4F8F12EC27F74CB800B99806 /* 04_01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F8F12EA27F74CB800B99806 /* 04_01.cpp */; };
+		4F8F12EC27F74CB800B99806 /* _04_01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F8F12EA27F74CB800B99806 /* _04_01.cpp */; };
 		4FB98F4627E883D100B8DCF6 /* _03_21.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FB98F4427E883D100B8DCF6 /* _03_21.cpp */; };
 		4FD92C7127FC5942004C1B43 /* _04_04.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FD92C6F27FC5942004C1B43 /* _04_04.cpp */; };
 		4FD92C7427FC9339004C1B43 /* _04_05.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FD92C7227FC9339004C1B43 /* _04_05.cpp */; };
@@ -45,8 +46,10 @@
 		4F4C767E27D6ECEA00A6135E /* _03_06.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _03_06.cpp; sourceTree = "<group>"; };
 		4F4C767F27D6ECEA00A6135E /* _03_07.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _03_07.cpp; sourceTree = "<group>"; };
 		4F4C768027D6ECEA00A6135E /* _03_05.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _03_05.cpp; sourceTree = "<group>"; };
+		4F7E26EE280BB12F002FA328 /* _04_17.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _04_17.cpp; sourceTree = "<group>"; };
+		4F7E26F2280BB368002FA328 /* class.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = class.h; sourceTree = "<group>"; };
 		4F808B3227FD6AA100D103FA /* _04_06.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _04_06.cpp; sourceTree = "<group>"; };
-		4F8F12EA27F74CB800B99806 /* 04_01.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = 04_01.cpp; sourceTree = "<group>"; };
+		4F8F12EA27F74CB800B99806 /* _04_01.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _04_01.cpp; sourceTree = "<group>"; };
 		4FB98F4427E883D100B8DCF6 /* _03_21.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _03_21.cpp; sourceTree = "<group>"; };
 		4FD92C6F27FC5942004C1B43 /* _04_04.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _04_04.cpp; sourceTree = "<group>"; };
 		4FD92C7227FC9339004C1B43 /* _04_05.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _04_05.cpp; sourceTree = "<group>"; };
@@ -83,6 +86,7 @@
 		4F1F958A27CDE8C100AFEFD8 /* cpp_test */ = {
 			isa = PBXGroup;
 			children = (
+				4F7E26F2280BB368002FA328 /* class.h */,
 				4F8F12E927F74CAB00B99806 /* 04 */,
 				4F4C767927D6ECEA00A6135E /* 03 */,
 				4F1F958B27CDE8C100AFEFD8 /* main.cpp */,
@@ -112,7 +116,8 @@
 				4FD92C6F27FC5942004C1B43 /* _04_04.cpp */,
 				4FD92C7227FC9339004C1B43 /* _04_05.cpp */,
 				4F808B3227FD6AA100D103FA /* _04_06.cpp */,
-				4F8F12EA27F74CB800B99806 /* 04_01.cpp */,
+				4F8F12EA27F74CB800B99806 /* _04_01.cpp */,
+				4F7E26EE280BB12F002FA328 /* _04_17.cpp */,
 			);
 			path = 04;
 			sourceTree = "<group>";
@@ -174,8 +179,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4F7E26EF280BB12F002FA328 /* _04_17.cpp in Sources */,
 				4F057E5427DF82A000769CA6 /* _03_14.cpp in Sources */,
-				4F8F12EC27F74CB800B99806 /* 04_01.cpp in Sources */,
+				4F8F12EC27F74CB800B99806 /* _04_01.cpp in Sources */,
 				4FB98F4627E883D100B8DCF6 /* _03_21.cpp in Sources */,
 				4F4C768527D6ECEA00A6135E /* _03_05.cpp in Sources */,
 				4F4C768327D6ECEA00A6135E /* _03_06.cpp in Sources */,
@@ -311,6 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79YNH6CFRS;
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PREFIX_HEADER = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -321,6 +328,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 79YNH6CFRS;
 				ENABLE_HARDENED_RUNTIME = YES;
+				GCC_PREFIX_HEADER = "";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

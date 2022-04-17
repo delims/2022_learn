@@ -19,15 +19,15 @@ extern void _04_01();
 extern void _04_04();
 extern void _04_05();
 extern void _04_06();
-
+extern void _04_17();
 
 int main(int argc, const char * argv[]) {
     
-    printf("%s\n",argv[0]);
+//    printf("%s\n",argv[0]);
 //    _04_01();
 //    _04_04();
 //    _04_05();
-    _04_06();
+    _04_17();
     return 0;
 }
 
