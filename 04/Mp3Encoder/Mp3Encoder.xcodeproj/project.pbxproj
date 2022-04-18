@@ -17,6 +17,8 @@
 		4F204C962803C649006FEA69 /* Mp3EncoderUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F204C952803C649006FEA69 /* Mp3EncoderUITests.m */; };
 		4F204C982803C649006FEA69 /* Mp3EncoderUITestsLaunchTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4F204C972803C649006FEA69 /* Mp3EncoderUITestsLaunchTests.m */; };
 		4F204CA62803C7C1006FEA69 /* Mp3Encoder.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F204CA42803C7C1006FEA69 /* Mp3Encoder.cpp */; };
+		4FC8B61D280D0DCD00C26778 /* libmp3lame.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4FC8B61C280D0DCD00C26778 /* libmp3lame.a */; settings = {ATTRIBUTES = (Required, ); }; };
+		4FF0A008280D3E54006596C7 /* 冰雨片段8k16bit单声道.pcm in Resources */ = {isa = PBXBuildFile; fileRef = 4FF0A007280D3E54006596C7 /* 冰雨片段8k16bit单声道.pcm */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +56,10 @@
 		4F204C972803C649006FEA69 /* Mp3EncoderUITestsLaunchTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Mp3EncoderUITestsLaunchTests.m; sourceTree = "<group>"; };
 		4F204CA42803C7C1006FEA69 /* Mp3Encoder.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = Mp3Encoder.cpp; sourceTree = "<group>"; };
 		4F204CA52803C7C1006FEA69 /* Mp3Encoder.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = Mp3Encoder.hpp; sourceTree = "<group>"; };
+		4FC8B61C280D0DCD00C26778 /* libmp3lame.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libmp3lame.a; sourceTree = "<group>"; };
+		4FF0A004280D2F31006596C7 /* lame.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; name = lame.h; path = ../../../audio/lame/thin/arm64/include/lame/lame.h; sourceTree = "<group>"; };
+		4FF0A007280D3E54006596C7 /* 冰雨片段8k16bit单声道.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; name = "冰雨片段8k16bit单声道.pcm"; path = "../../../../Downloads/pcm/冰雨片段8k16bit单声道.pcm"; sourceTree = "<group>"; };
+		4FF0A009280D3EC8006596C7 /* 冰雨片段8k16bit单声道.pcm */ = {isa = PBXFileReference; lastKnownFileType = file; name = "冰雨片段8k16bit单声道.pcm"; path = "../../../../../Downloads/pcm/冰雨片段8k16bit单声道.pcm"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,6 +67,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FC8B61D280D0DCD00C26778 /* libmp3lame.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -84,10 +91,12 @@
 		4F204C632803C645006FEA69 = {
 			isa = PBXGroup;
 			children = (
+				4FF0A007280D3E54006596C7 /* 冰雨片段8k16bit单声道.pcm */,
 				4F204C6E2803C645006FEA69 /* Mp3Encoder */,
 				4F204C8A2803C649006FEA69 /* Mp3EncoderTests */,
 				4F204C942803C649006FEA69 /* Mp3EncoderUITests */,
 				4F204C6D2803C645006FEA69 /* Products */,
+				4FC8B61B280D0DCD00C26778 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -104,6 +113,8 @@
 		4F204C6E2803C645006FEA69 /* Mp3Encoder */ = {
 			isa = PBXGroup;
 			children = (
+				4FF0A009280D3EC8006596C7 /* 冰雨片段8k16bit单声道.pcm */,
+				4FC8B61C280D0DCD00C26778 /* libmp3lame.a */,
 				4F204C6F2803C645006FEA69 /* AppDelegate.h */,
 				4F204C702803C645006FEA69 /* AppDelegate.mm */,
 				4F204C7B2803C648006FEA69 /* Assets.xcassets */,
@@ -111,6 +122,7 @@
 				4F204C7D2803C648006FEA69 /* LaunchScreen.storyboard */,
 				4F204C812803C648006FEA69 /* main.m */,
 				4F204C782803C645006FEA69 /* Main.storyboard */,
+				4FF0A004280D2F31006596C7 /* lame.h */,
 				4F204CA42803C7C1006FEA69 /* Mp3Encoder.cpp */,
 				4F204CA52803C7C1006FEA69 /* Mp3Encoder.hpp */,
 				4F204C752803C645006FEA69 /* ViewController.h */,
@@ -134,6 +146,13 @@
 				4F204C972803C649006FEA69 /* Mp3EncoderUITestsLaunchTests.m */,
 			);
 			path = Mp3EncoderUITests;
+			sourceTree = "<group>";
+		};
+		4FC8B61B280D0DCD00C26778 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -239,6 +258,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4FF0A008280D3E54006596C7 /* 冰雨片段8k16bit单声道.pcm in Resources */,
 				4F204C7F2803C648006FEA69 /* LaunchScreen.storyboard in Resources */,
 				4F204C7C2803C648006FEA69 /* Assets.xcassets in Resources */,
 				4F204C7A2803C645006FEA69 /* Main.storyboard in Resources */,
@@ -375,7 +395,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -427,7 +447,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				IPHONEOS_DEPLOYMENT_TARGET = 13.1;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -443,6 +463,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 79YNH6CFRS;
+				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mp3Encoder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -452,6 +473,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Mp3Encoder",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.delims.Mp3Encoder;
@@ -469,6 +494,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 79YNH6CFRS;
+				ENABLE_BITCODE = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Mp3Encoder/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -478,6 +504,10 @@
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
+				);
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Mp3Encoder",
 				);
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.delims.Mp3Encoder;
