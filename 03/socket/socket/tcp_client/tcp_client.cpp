@@ -48,7 +48,7 @@ struct info_t {
     char id[8];
     info_t(){
         type = 1;
-        memcpy(id, "21003168", sizeof(id));
+        memcpy(id, "10001809", sizeof(id));
     }
 };
 
@@ -87,10 +87,10 @@ int run_tcp_client () {
     sockaddr_in server_addr_in;
     server_addr_in.sin_family = AF_INET;
 //    server_addr_in.sin_addr.s_addr = inet_addr("127.0.0.1");
-//    server_addr_in.sin_addr.s_addr = inet_addr("192.168.14.12");
-    //    server_addr_in.sin_addr.s_addr = inet_addr("123.124.91.28");
-        server_addr_in.sin_addr.s_addr = inet_addr("223.223.187.43");
-    server_addr_in.sin_port = htons(50001);
+    server_addr_in.sin_addr.s_addr = inet_addr("192.168.14.12");
+//        server_addr_in.sin_addr.s_addr = inet_addr("123.124.91.28");
+//        server_addr_in.sin_addr.s_addr = inet_addr("223.223.187.43");
+    server_addr_in.sin_port = htons(16536);
     
     int sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     
@@ -226,7 +226,6 @@ void *tcp_client_read(void* arg) {
             for (int i = 0;i < 4;i++) {
                 printf("lat = %f lng = %f \n",info.positions[i].latitude * 0.00000001,info.positions[i].longitude * 0.00000001);
             }
-            
             
             //        char *bytes = (char*) malloc(totalsize);
             

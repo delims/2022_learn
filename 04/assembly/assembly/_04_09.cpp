@@ -49,22 +49,45 @@ static void func1() {
 
 
 class Apple {
+    int a;
 public:
-    void func(){
-        
+    Apple() {
+        printf("constructor\n");
+    }
+    ~Apple() {
+        printf("desctructor\n");
+    }
+    Apple(const Apple &a) {
+        printf("copy constructor\n");
+    }
+    
+    Apple& operator= (const Apple &a) {
+        printf("copy constructor\n");
+        return *this;
+    }
+    Apple* operator&() {
+        return this;
+    }
+    const Apple* operator&() const {
+        return this;
     }
 };
 
+static Apple func(Apple &a) {
+    return a;
+}
+
 void _04_09() {
 //    func1();
-//
 //    Apple a;
 //    a.func();
     
+    Apple a;
     
-    printf("%d\n",100);
+    func(a);
     
     
+//    printf("%d\n",100);
 }
 
 //0x100003f30 <+0>:  pushq  %rbp

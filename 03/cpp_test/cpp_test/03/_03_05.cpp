@@ -8,9 +8,7 @@
 #include <stdio.h>
 
 //    Pear p;
-    
 //    Pear *pear = new Pear[3]();
-//
 //    delete pear;
     
 //    char *p = (char*)malloc(10);

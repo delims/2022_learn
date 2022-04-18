@@ -20,6 +20,7 @@ extern void _04_04();
 extern void _04_05();
 extern void _04_06();
 extern void _04_17();
+extern void _04_15();
 
 int main(int argc, const char * argv[]) {
     
@@ -28,6 +29,8 @@ int main(int argc, const char * argv[]) {
 //    _04_04();
 //    _04_05();
     _04_17();
+//    _04_06();
+//    _04_15();
     return 0;
 }
 

@@ -62,13 +62,13 @@ private:
 
 void _04_17() {
     
-    Apple a;
+//    Apple a;
     
 //    a.color = 130;
 //    a.weight = 245;
     
 //    Apple b(a);
-    Apple b(a);
+//    Apple b(a);
 
 //    std::list<Apple> b;
 //
