@@ -6,6 +6,11 @@
 //
 
 #include <stdio.h>
+#include <iostream>
+#include <sys/fcntl.h>
+#include <vector>
+#include <thread>
+#include <unistd.h>
 
 class Apple
 {

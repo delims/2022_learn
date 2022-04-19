@@ -79,9 +79,9 @@ int main(int argc, const char * argv[]) {
         NSString *b_string = [@"" mutableCopy];
         NSString *c_string = [NSString stringWithFormat:@"%@",@"123"];
 
-        NSLog(@"%lx--%p--%p",(NSUInteger)a_string,b_string,c_string);
-        NSLog(@"%p--%p--%p",a_string,b_string,c_string);
-        NSLog(@"%p--%p--%p",&a_string,&b_string,&c_string);
+        NSLog(@"0x%012lx--0x%012lx--0x%012lx",(NSUInteger)a_string,b_string,c_string);
+        NSLog(@"0x%012lx--0x%012lx--0x%012lx",a_string,b_string,c_string);
+        NSLog(@"0x%012lx--0x%012lx--0x%012lx",&a_string,&b_string,&c_string);
 
 //
 //        while (1) {

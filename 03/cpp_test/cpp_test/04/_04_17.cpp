@@ -96,6 +96,11 @@ void _04_17() {
 //    MyFunction<int(int,int)> func2 = sum;
 //    std::cout << func2(10,20) << endl;
     
+    bool a = true;
+    
+    if (!!!!a) {
+        printf("true");
+    }
     
     
 }
