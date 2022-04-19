@@ -10,7 +10,7 @@
 #include <iostream>
 #include <vector>
 #include <list>
-
+//#include <weak_ptr>
 using namespace std;
 static void testFunc(int apple) {
     
@@ -57,11 +57,64 @@ private:
     Pfunc pfunc_;
 };
 
+class RedApple : public Apple {
+public:
+    
+    RedApple(){
+        printf("red apple constructor\n");
+    }
+    ~RedApple(){
+        printf("red apple destructor\n");
+    }
+    
+    void* operator new(unsigned long size) {
+        printf("call new \n");
+        return  malloc(100);
+    }
+    operator int() {
+        return 456;
+    }
+};
+
+
+//static void test_func(int a1,int a2,int a3,int a4,int a5,int a6,int a7,int a8,int a9) {
+//    int x1 = a7;
+//    int x2 = a8;
+//    int x3 = a9;
+//}
+//static void test_func(int a1,int a2,int a3,int a4,int a5,int a6) {
+//
+//}
+
+Apple testCopy(Apple  a) {
+    return a;
+}
 
 
 
 void _04_17() {
+
+//    test_func(1, 2, 3, 4, 5, 6);
+//    test_func(1, 2, 3, 4, 5, 6,7,8,9);
     
+//    Apple a;
+//    testCopy(a);
+
+//    weak_ptr<Apple> a = std::make_<Apple>();
+    
+    
+
+//    RedApple *a = new RedApple();
+//
+//    delete a;
+    
+//    void *p = operator new (100);
+//
+//    Apple *a =  new (p) Apple();
+//
+//    RedApple *red = new RedApple;
+//
+//    print_int((int)*red);
 //    Apple a;
     
 //    a.color = 130;
@@ -96,11 +149,11 @@ void _04_17() {
 //    MyFunction<int(int,int)> func2 = sum;
 //    std::cout << func2(10,20) << endl;
     
-    bool a = true;
-    
-    if (!!!!a) {
-        printf("true");
-    }
-    
+//    bool a = true;
+//
+//    if (!!!!a) {
+//        printf("true");
+//    }
+//
     
 }

@@ -24,9 +24,9 @@ public:
     ~Apple(){
         printf("apple destructor %p\n",this);
     }
-//    Apple(const Apple& apple) {
-//        printf("apple copy constructor\n");
-//    }
+    Apple(const Apple& apple) {
+        printf("apple copy constructor\n");
+    }
 //    Apple(const Apple&& apple) {
 //        printf("apple move constructor\n");
 //    }
@@ -45,3 +45,10 @@ public:
 //        return this;
 //    }
 };
+
+void prints(const char* p, size_t size);
+void print_int_to_string(unsigned int);
+void print_long_to_string(unsigned long);
+void print_int(int value);
+void print_u_int(unsigned int value);
+void println();
