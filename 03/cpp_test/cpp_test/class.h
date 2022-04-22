@@ -44,6 +44,13 @@ public:
 //    const Apple* operator& () const {
 //        return this;
 //    }
+    
+    void operator()(){
+        printf("call ()\n");
+    }
+    void operator()(int,int){
+        printf("call (int,int)\n");
+    }
 };
 
 void prints(const char* p, size_t size);

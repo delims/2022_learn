@@ -23,10 +23,12 @@ extern void _04_06();
 extern void _04_15();
 extern void _04_17();
 extern void _04_19_riff();
+extern void _04_21();
+extern void _04_22();
 
 int main(int argc, const char * argv[]) {
 //    printf("%s\n",argv[0]);
-    _04_17();
+    _04_22();
     return 0;
 }
 

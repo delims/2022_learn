@@ -63,7 +63,6 @@ public:
 void _04_05() {
     
 //    _Apple a;
-    
 //    int x;
 //    int y;
 //

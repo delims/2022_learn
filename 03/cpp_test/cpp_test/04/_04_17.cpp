@@ -92,6 +92,7 @@ Apple testCopy(Apple  a) {
 
 
 
+
 void _04_17() {
 
 //    test_func(1, 2, 3, 4, 5, 6);
@@ -115,6 +116,7 @@ void _04_17() {
 //    RedApple *red = new RedApple;
 //
 //    print_int((int)*red);
+
 //    Apple a;
     
 //    a.color = 130;

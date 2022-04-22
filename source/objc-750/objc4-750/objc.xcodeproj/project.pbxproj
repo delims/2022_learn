@@ -514,6 +514,7 @@
 			children = (
 				830F2A970D738DC200392440 /* hashtable.h */,
 				838485B70D6D687300CEA253 /* hashtable2.h */,
+				838486230D6D68F000CEA253 /* List.m */,
 				838485CD0D6D68A200CEA253 /* objc-class.h */,
 				838485D70D6D68A200CEA253 /* objc-load.h */,
 				838485E30D6D68A200CEA253 /* objc-runtime.h */,
@@ -527,7 +528,6 @@
 		838486270D6D690F00CEA253 /* Obsolete Source */ = {
 			isa = PBXGroup;
 			children = (
-				838486230D6D68F000CEA253 /* List.m */,
 				838485EE0D6D68A200CEA253 /* Object.mm */,
 			);
 			name = "Obsolete Source";
