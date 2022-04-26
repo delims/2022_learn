@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		4F03666027D8548300106FA6 /* _03_09.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F03665E27D8548300106FA6 /* _03_09.cpp */; };
 		4F057E5427DF82A000769CA6 /* _03_14.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F057E5227DF82A000769CA6 /* _03_14.cpp */; };
+		4F08EF5128178557002B4E55 /* _04_26.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F08EF5028178557002B4E55 /* _04_26.cpp */; };
 		4F11FB3327F4927C00297D5B /* _03_30.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F11FB3127F4927C00297D5B /* _03_30.cpp */; };
 		4F1F958C27CDE8C100AFEFD8 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F1F958B27CDE8C100AFEFD8 /* main.cpp */; };
 		4F4C768227D6ECEA00A6135E /* _03_08.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C767D27D6ECEA00A6135E /* _03_08.cpp */; };
@@ -27,6 +28,7 @@
 		4FD92C7127FC5942004C1B43 /* _04_04.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FD92C6F27FC5942004C1B43 /* _04_04.cpp */; };
 		4FD92C7427FC9339004C1B43 /* _04_05.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FD92C7227FC9339004C1B43 /* _04_05.cpp */; };
 		4FDF4D0F2811375400ED002E /* _04_21_std_atomic.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FDF4D0E2811375400ED002E /* _04_21_std_atomic.cpp */; };
+		4FFA6F40281639120049E344 /* _04_25.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FFA6F3F281639120049E344 /* _04_25.cpp */; };
 		4FFFC78327E4310E005C89BE /* _03_18.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4FFFC78127E4310E005C89BE /* _03_18.cpp */; };
 /* End PBXBuildFile section */
 
@@ -45,6 +47,7 @@
 /* Begin PBXFileReference section */
 		4F03665E27D8548300106FA6 /* _03_09.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _03_09.cpp; sourceTree = "<group>"; };
 		4F057E5227DF82A000769CA6 /* _03_14.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _03_14.cpp; sourceTree = "<group>"; };
+		4F08EF5028178557002B4E55 /* _04_26.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _04_26.cpp; sourceTree = "<group>"; };
 		4F11FB3127F4927C00297D5B /* _03_30.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _03_30.cpp; sourceTree = "<group>"; };
 		4F1F958827CDE8C100AFEFD8 /* cpp_test */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = cpp_test; sourceTree = BUILT_PRODUCTS_DIR; };
 		4F1F958B27CDE8C100AFEFD8 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
@@ -65,6 +68,7 @@
 		4FD92C6F27FC5942004C1B43 /* _04_04.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _04_04.cpp; sourceTree = "<group>"; };
 		4FD92C7227FC9339004C1B43 /* _04_05.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _04_05.cpp; sourceTree = "<group>"; };
 		4FDF4D0E2811375400ED002E /* _04_21_std_atomic.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _04_21_std_atomic.cpp; sourceTree = "<group>"; };
+		4FFA6F3F281639120049E344 /* _04_25.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _04_25.cpp; sourceTree = "<group>"; };
 		4FFFC78127E4310E005C89BE /* _03_18.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _03_18.cpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -136,6 +140,8 @@
 				4FDF4D0E2811375400ED002E /* _04_21_std_atomic.cpp */,
 				4F506BA928129A5300AF0421 /* _04_22_lambda.cpp */,
 				4FBE20F12814E5B4003C6F0C /* _04_24.cpp */,
+				4FFA6F3F281639120049E344 /* _04_25.cpp */,
+				4F08EF5028178557002B4E55 /* _04_26.cpp */,
 			);
 			path = 04;
 			sourceTree = "<group>";
@@ -215,6 +221,8 @@
 				4F03666027D8548300106FA6 /* _03_09.cpp in Sources */,
 				4F808B3427FD6AA100D103FA /* _04_06.cpp in Sources */,
 				4FFFC78327E4310E005C89BE /* _03_18.cpp in Sources */,
+				4FFA6F40281639120049E344 /* _04_25.cpp in Sources */,
+				4F08EF5128178557002B4E55 /* _04_26.cpp in Sources */,
 				4FD92C7427FC9339004C1B43 /* _04_05.cpp in Sources */,
 				4F1F958C27CDE8C100AFEFD8 /* main.cpp in Sources */,
 				4F4C768427D6ECEA00A6135E /* _03_07.cpp in Sources */,

@@ -14,9 +14,7 @@ using namespace std;
 
 void _04_21() {
     atomic<int> a = 1;
-    
     a ++;
-    
 }
 
 

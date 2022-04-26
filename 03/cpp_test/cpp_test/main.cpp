@@ -26,11 +26,12 @@ extern void _04_19_riff();
 extern void _04_21();
 extern void _04_22();
 extern void _04_24();
-
+extern void _04_25();
+extern void _04_26();
 
 int main(int argc, const char * argv[]) {
     printf("%s\n",argv[0]);
-    _04_24();
+    _04_26();
     return 0;
 }
 
