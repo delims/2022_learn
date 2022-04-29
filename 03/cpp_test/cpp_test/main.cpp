@@ -28,6 +28,7 @@ extern void _04_22();
 extern void _04_24();
 extern void _04_25();
 extern void _04_26();
+extern void _04_29();
 
 int main(int argc, const char * argv[]) {
     printf("%s\n",argv[0]);
