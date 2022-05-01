@@ -29,10 +29,11 @@ extern void _04_24();
 extern void _04_25();
 extern void _04_26();
 extern void _04_29();
+extern void _04_28();
 
 int main(int argc, const char * argv[]) {
-    printf("%s\n",argv[0]);
-    _04_26();
+//    printf("%s\n",argv[0]);
+    _04_28();
     return 0;
 }
 

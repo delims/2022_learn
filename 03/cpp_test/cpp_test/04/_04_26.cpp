@@ -31,7 +31,8 @@ void _04_26() {
 //    res.push_back(a);
 //    cout << res.size() << " " << res.capacity() << " data=" << res.data() << endl;
 //    cout << sizeof(A) << endl;
-    
+
+
     int i = 100;
     const int j = 200;
     
