@@ -18,6 +18,7 @@
 #include <thread>
 #include <vector>
 #include <mutex>
+#include <stdlib.h>
 
 void *tcp_client_read(void* arg);
 
@@ -31,24 +32,29 @@ struct tcp_message {
 
 struct from_tcp_heart_t {
     char type = 2;
+    char device_no[16];
     unsigned long latitude:40;
     unsigned long longitude:40;
     short speed;
     char status;
     char task_id[32];
+    
+    from_tcp_heart_t(){
+        memcpy(device_no, "NA20220321000001", sizeof(device_no));
+    }
 };
 
 struct from_tcp_device_info_t {
     char type = 1;
-    char device_no[8];
+    char device_no[16];
 };
 
 struct info_t {
     char type = 1;
-    char id[8];
+    char id[16];
     info_t(){
         type = 1;
-        memcpy(id, "10001809", sizeof(id));
+        memcpy(id, "NA20220321000001", sizeof(id));
     }
 };
 
@@ -86,12 +92,13 @@ int run_tcp_client () {
     
     sockaddr_in server_addr_in;
     server_addr_in.sin_family = AF_INET;
-//    server_addr_in.sin_addr.s_addr = inet_addr("127.0.0.1");
-    server_addr_in.sin_addr.s_addr = inet_addr("192.168.14.12");
-//        server_addr_in.sin_addr.s_addr = inet_addr("123.124.91.28");
+    server_addr_in.sin_addr.s_addr = inet_addr("127.0.0.1");
+//    server_addr_in.sin_addr.s_addr = inet_addr("192.168.14.12");
+//    server_addr_in.sin_addr.s_addr = inet_addr("123.124.91.28");
 //        server_addr_in.sin_addr.s_addr = inet_addr("223.223.187.43");
-    server_addr_in.sin_port = htons(16536);
-    
+//    server_addr_in.sin_port = htons(11003);
+    server_addr_in.sin_port = htons(50001);
+
     int sock = socket(AF_INET, SOCK_STREAM, IPPROTO_TCP);
     
     int con_ret = 1;
@@ -111,21 +118,21 @@ int run_tcp_client () {
     while (1) {
         //        sprintf(buffer, "% 6d\n",number++);
         tcp_message msg;
-        info_t info;
-        msg.length = sizeof(info);
-        int totalsize = sizeof(msg) + sizeof(info) + 1;
-        char *bytes = (char*) malloc(totalsize);
-        memcpy(bytes, &msg, sizeof(msg));
-        memcpy(bytes + sizeof(msg), &info, sizeof(info));
-        bytes[totalsize-1] = crc(bytes, totalsize-1);
-        write(sock, bytes, totalsize);
-        free(bytes);
+//        info_t info;
+//        msg.length = sizeof(info);
+//        int totalsize = sizeof(msg) + sizeof(info) + 1;
+//        char *bytes = (char*) malloc(totalsize);
+//        memcpy(bytes, &msg, sizeof(msg));
+//        memcpy(bytes + sizeof(msg), &info, sizeof(info));
+//        bytes[totalsize-1] = crc(bytes, totalsize-1);
+//        write(sock, bytes, totalsize);
+//        free(bytes);
         
         sleep(1);
 //        close(sock);
 //        return 0;
 //
-#define coor_scale   100000000
+#define coor_scale    100000000
 #define coor_scale_1 0.00000001
         int count = 0;
         int task_start_success = 0;
@@ -134,18 +141,18 @@ int run_tcp_client () {
             heart.type = 2;
             heart.status = 0;
             heart.longitude = 160.12343 * coor_scale - (0.000001 * count++);
-            heart.latitude = 40.12343 * coor_scale;
+            heart.latitude  =  40.12343 * coor_scale;
             heart.speed = 100;
             static int times = 0;
-            if (times ++ >= 3) {
-                memcpy(heart.task_id, "1c4479c7461a4177a851858485bd6680", 32);
-                if (times == 5) heart.status = 1;
-                if (times > 6) {
-                    heart.status = 0;
-                }
-
-            } else
-            memcpy(heart.task_id, "00000000000000000000000000000000", 32);
+            
+//            if (times ++ >= 3) {
+//                memcpy(heart.task_id, "1c4479c7461a4177a851858485bd6680", 32);
+//                if (times == 5) heart.status = 1;
+//                if (times > 6) {
+//                    heart.status = 0;
+//                }
+//            } else
+//            memcpy(heart.task_id, "00000000000000000000000000000000", 32);
             
             msg.length = sizeof(heart);
             int totalsize = sizeof(msg) + sizeof(heart) + 1;
@@ -155,9 +162,10 @@ int run_tcp_client () {
             bytes[totalsize-1] = crc((const char *)&heart, sizeof(heart));
             ssize_t write_ret = write(sock, bytes, totalsize);
             printf("write %ld bytes \n",write_ret);
+            
 //            if (write_ret == -1 )
             free(bytes);
-            sleep(6);
+            sleep(1);
             
             
             
@@ -178,17 +186,19 @@ int run_tcp_client () {
 //                }
 //            }
             
-            if (send_buffer.size() == 0) continue;
-            lock.lock();
+//            if (send_buffer.size() == 0) continue;
+//            lock.lock();
             //发送开始成功
 //            send(sock, &send_buffer[0], send_buffer.size(), 0);
 //            task_start_success = 1;
 //            printf("client sent %ld bytes\n",send_buffer.size());
 //            send_buffer.clear();
-            lock.unlock();
+//            lock.unlock();
         }
         
         printf("%s ",buffer);
+        
+
         
         sleep(6);
         
