@@ -16,6 +16,7 @@
 		4F4C768327D6ECEA00A6135E /* _03_06.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C767E27D6ECEA00A6135E /* _03_06.cpp */; };
 		4F4C768427D6ECEA00A6135E /* _03_07.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C767F27D6ECEA00A6135E /* _03_07.cpp */; };
 		4F4C768527D6ECEA00A6135E /* _03_05.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F4C768027D6ECEA00A6135E /* _03_05.cpp */; };
+		4F4E5999282D4A2A0043587B /* _05_01.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F4E5998282D4A2A0043587B /* _05_01.cpp */; };
 		4F506BAA28129A5300AF0421 /* _04_22_lambda.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F506BA928129A5300AF0421 /* _04_22_lambda.cpp */; };
 		4F7E26EF280BB12F002FA328 /* _04_17.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F7E26EE280BB12F002FA328 /* _04_17.cpp */; };
 		4F808B3427FD6AA100D103FA /* _04_06.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4F808B3227FD6AA100D103FA /* _04_06.cpp */; };
@@ -58,6 +59,7 @@
 		4F4C767E27D6ECEA00A6135E /* _03_06.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _03_06.cpp; sourceTree = "<group>"; };
 		4F4C767F27D6ECEA00A6135E /* _03_07.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _03_07.cpp; sourceTree = "<group>"; };
 		4F4C768027D6ECEA00A6135E /* _03_05.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _03_05.cpp; sourceTree = "<group>"; };
+		4F4E5998282D4A2A0043587B /* _05_01.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = _05_01.cpp; sourceTree = "<group>"; };
 		4F506BA928129A5300AF0421 /* _04_22_lambda.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _04_22_lambda.cpp; sourceTree = "<group>"; };
 		4F7E26EE280BB12F002FA328 /* _04_17.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = _04_17.cpp; sourceTree = "<group>"; };
 		4F7E26F2280BB368002FA328 /* class.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = class.h; sourceTree = "<group>"; };
@@ -158,6 +160,7 @@
 		4FC5C2C4282BB61E00E3A889 /* 05 */ = {
 			isa = PBXGroup;
 			children = (
+				4F4E5998282D4A2A0043587B /* _05_01.cpp */,
 				4FC5C2C5282BB64700E3A889 /* _05_11.cpp */,
 			);
 			name = 05;
@@ -226,6 +229,7 @@
 				4F7E26EF280BB12F002FA328 /* _04_17.cpp in Sources */,
 				4FDF4D0F2811375400ED002E /* _04_21_std_atomic.cpp in Sources */,
 				4F057E5427DF82A000769CA6 /* _03_14.cpp in Sources */,
+				4F4E5999282D4A2A0043587B /* _05_01.cpp in Sources */,
 				4FC92E9A280ED69400482515 /* _04_19_riff.cpp in Sources */,
 				4F8F12EC27F74CB800B99806 /* _04_01.cpp in Sources */,
 				4FB98F4627E883D100B8DCF6 /* _03_21.cpp in Sources */,
